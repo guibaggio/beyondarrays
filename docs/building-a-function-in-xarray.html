@@ -4297,7 +4297,7 @@ nan nan nan nan … nan nan nan nan
 </div>
 <div id="calculating-autocorrelation-lag-1" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Calculating autocorrelation lag-1<a href="building-a-function-in-xarray.html#calculating-autocorrelation-lag-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the last two section, we saw how to use the well-defined NumPy operations <code>mean()</code> and <code>std()</code> in a Dataset over the dimension <code>time</code>. Now, how would we create new a function that is not defined in the NumPy library? Let’s try first with the lag-1 autocorrelation.</p>
+<p>In the last two sections, we saw how to use the well-defined NumPy operations <code>mean()</code> and <code>std()</code> in a Dataset over the dimension <code>time</code>. Now, how would we create new a function that is not defined in the NumPy library? Let’s try first with the lag-1 autocorrelation.</p>
 <p>First, let’s define create a new function <code>lag1_numpy</code> by using the NumPy syntax.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="building-a-function-in-xarray.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lag1_numpy(array):</span>
 <span id="cb18-2"><a href="building-a-function-in-xarray.html#cb18-2" aria-hidden="true" tabindex="-1"></a>    ecorr <span class="op">=</span> np.correlate((array<span class="op">-</span>np.mean(array))<span class="op">/</span>np.std(array),(array<span class="op">-</span>np.mean(array))</span>
@@ -6310,7 +6310,7 @@ numpy.ndarray
 </ul>
 </div>
 </div>
-<p>As you probably noticed, it took a few seconds (or less) to execute the <code>efold_xarray</code> and create a new Dataset with the variable <code>efold</code> and a new dimension <code>model</code>. From an user standpoint, the key concept of a <code>dask.array</code> is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.</p>
+<p>Now, it took a few seconds (or less) to execute the <code>efold_xarray</code> and create a new Dataset with the variable <code>efold</code> and a new dimension <code>model</code>. From an user standpoint, the key concept of a <code>dask.array</code> is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.</p>
 <p>Building upon Dask has several advantages. For instance, defining the chunks on which the computation will be performed is only modification needed in the code. The Dask library also allows for easily leveraging the resources of shared memory architectures (multi-core laptop or work-station) and resources of distributed memory architectures (clusters of cpu).</p>
 <p>Yet, parallelization comes at a cost. Loading the data with <code>dask.arrays</code> is only done at the execution time if needed. This means that we have access to the Dataset without having to worry about the time it will take to load the data, but it will not simply reduce the time that it takes to load the data. The chunks also have implications on the performance of the code. If the chunks are too small, queueing up operations will be extremely slow, because Dask will translate each operation into a huge number of operations mapped across chunks. If the chunks are too big, some of the computation power may be wasted, because Dask only computes results one chunk at a time.</p>
 
