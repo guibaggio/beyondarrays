@@ -3,8 +3,8 @@ dowscalling-climate-data
 local-data-means-more-data
 building-a-function-in-xarray
 working-with-xarray
-creating-a-simple-function-in-xarray
-multi-model-mean-in-xarray
+creating-a-simple-function
+calculating-the-multi-model-ensemble-mean
 calculating-autocorrelation-lag-1
-dask-arrays-and-parallel-calculations
+dask-arrays-and-parallel-calculation
 key-takeaways

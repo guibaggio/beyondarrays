@@ -10,7 +10,7 @@ Secondly, the xarray library provides tools for working with NetCDF files common
 
 To organize the dimensions, coordinates, variables, and attributes of data, the xarray library has two fundamental data structures built upon the strengths of the NumPy and pandas libraries. A _DataArray_ is the first structure defined by a multi-dimensional array with an underlying variable. Each DataArray contains dimensions, coordinates, and attributes of one variable only. _Datasets_ are the second structure defined by a collection of DataArray objects aligned along with any number of shared dimensions. Since this structure is borrowed from the NetCDF file format, Datasets provide a more natural way to work with data stored in that type of file. Datasets also work as dictionaries, and most operations performed on the dimensions of a DataArray can be performed on Datasets as well.
 
-## Creating a simple function in _xarray_
+## Creating a simple function
 
 Not let's create a simple function on xarray. First, we should import the key libraries for creating a function that calculates the monthly mean temperature from daily data for each point in space defined by its coordinates ```latitude``` and ```longitude```.
 
@@ -1748,7 +1748,7 @@ plt.show()
     
 ![Figure 2 - Seasonal mean temperature](output_17_0.png)
     
-## Multi-model mean in _xarray_
+## Calculating the multi-model ensemble mean
 
 Now, let's say we have daily temperature data for 24 GCMs. How do we calculate the the mean over the time dimension for each model? We can do that by using a ```for``` loop as defined in the NumPy library.
 
@@ -3583,7 +3583,7 @@ ax.set_title('Multi-Model Ensemble Lag-1 Autocorrelation',
     
 ![Figure 5 - Multi-model ensemble lag-1 autocorrelation](output_16_1.png)
 
-## _Dask_ arrays and parallel calculations
+## _Dask_ arrays and parallel calculation
 
 Now, let's create a function that calculates the e-folding time. First, we define this function with NumPy syntax.
 

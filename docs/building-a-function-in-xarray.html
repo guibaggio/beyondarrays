@@ -167,10 +167,10 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html"><i class="fa fa-check"></i><b>2</b> Building a function in <em>xarray</em></a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#working-with-xarray"><i class="fa fa-check"></i><b>2.1</b> Working with <em>xarray</em></a></li>
-<li class="chapter" data-level="2.2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#creating-a-simple-function-in-xarray"><i class="fa fa-check"></i><b>2.2</b> Creating a simple function in <em>xarray</em></a></li>
-<li class="chapter" data-level="2.3" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#multi-model-mean-in-xarray"><i class="fa fa-check"></i><b>2.3</b> Multi-model mean in <em>xarray</em></a></li>
+<li class="chapter" data-level="2.2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#creating-a-simple-function"><i class="fa fa-check"></i><b>2.2</b> Creating a simple function</a></li>
+<li class="chapter" data-level="2.3" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#calculating-the-multi-model-ensemble-mean"><i class="fa fa-check"></i><b>2.3</b> Calculating the multi-model ensemble mean</a></li>
 <li class="chapter" data-level="2.4" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#calculating-autocorrelation-lag-1"><i class="fa fa-check"></i><b>2.4</b> Calculating autocorrelation lag-1</a></li>
-<li class="chapter" data-level="2.5" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#dask-arrays-and-parallel-calculations"><i class="fa fa-check"></i><b>2.5</b> <em>Dask</em> arrays and parallel calculations</a></li>
+<li class="chapter" data-level="2.5" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#dask-arrays-and-parallel-calculation"><i class="fa fa-check"></i><b>2.5</b> <em>Dask</em> arrays and parallel calculation</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="key-takeaways.html"><a href="key-takeaways.html"><i class="fa fa-check"></i><b>3</b> Key takeaways</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -206,8 +206,8 @@ A brief review of challenges in working with multi-dimensional downscaled climat
 <p>Secondly, the xarray library provides tools for working with NetCDF files commonly used in climate sciences. These files allow for storing multi-dimensional data such as temperature and precipitation. Each of these variables can be displayed spatially (by having one value per coordinate of latitude and longitude, for example) and throughout time (by having one value per day, month, or year, for example). The multi-dimensional nature of xarray structures makes them particularly suitable for dealing with labelled scientific data stored in netCDF files. The use of dimension names in xarray instead of NumPy-like axis labels creates a more instinctive coding practice.</p>
 <p>To organize the dimensions, coordinates, variables, and attributes of data, the xarray library has two fundamental data structures built upon the strengths of the NumPy and pandas libraries. A <em>DataArray</em> is the first structure defined by a multi-dimensional array with an underlying variable. Each DataArray contains dimensions, coordinates, and attributes of one variable only. <em>Datasets</em> are the second structure defined by a collection of DataArray objects aligned along with any number of shared dimensions. Since this structure is borrowed from the NetCDF file format, Datasets provide a more natural way to work with data stored in that type of file. Datasets also work as dictionaries, and most operations performed on the dimensions of a DataArray can be performed on Datasets as well.</p>
 </div>
-<div id="creating-a-simple-function-in-xarray" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Creating a simple function in <em>xarray</em><a href="building-a-function-in-xarray.html#creating-a-simple-function-in-xarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="creating-a-simple-function" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Creating a simple function<a href="building-a-function-in-xarray.html#creating-a-simple-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Not let’s create a simple function on xarray. First, we should import the key libraries for creating a function that calculates the monthly mean temperature from daily data for each point in space defined by its coordinates <code>latitude</code> and <code>longitude</code>.</p>
 <p>This example shows how to use Numpy functions, such as <code>mean()</code> an <code>std()</code>, in a xarray Dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="building-a-function-in-xarray.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2919,8 +2919,8 @@ nan nan nan nan … nan nan nan nan
 <p class="caption">Figure 2 - Seasonal mean temperature</p>
 </div>
 </div>
-<div id="multi-model-mean-in-xarray" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Multi-model mean in <em>xarray</em><a href="building-a-function-in-xarray.html#multi-model-mean-in-xarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="calculating-the-multi-model-ensemble-mean" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Calculating the multi-model ensemble mean<a href="building-a-function-in-xarray.html#calculating-the-multi-model-ensemble-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now, let’s say we have daily temperature data for 24 GCMs. How do we calculate the the mean over the time dimension for each model? We can do that by using a <code>for</code> loop as defined in the NumPy library.</p>
 <p>For the sake of simplicity, the following code only enters the names of each one of the GCMs. Ultimately, you can use the command <code>xr.open_dataset</code> to open the NetCDF files containing the daily data for each one of the models.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="building-a-function-in-xarray.html#cb10-1" aria-hidden="true" tabindex="-1"></a>model_name <span class="op">=</span> [<span class="st">&quot;ACCESS1-0&quot;</span>,<span class="st">&quot;bcc-csm1-1&quot;</span>,<span class="st">&quot;bcc-csm1-1-m&quot;</span>,<span class="st">&quot;BNU-ESM&quot;</span>,<span class="st">&quot;CanESM2&quot;</span>,<span class="st">&quot;CCSM4&quot;</span>,<span class="st">&quot;CESM1-CAM5&quot;</span>,</span>
@@ -5592,8 +5592,8 @@ nan nan nan nan … nan nan nan nan
 <p class="caption">Figure 5 - Multi-model ensemble lag-1 autocorrelation</p>
 </div>
 </div>
-<div id="dask-arrays-and-parallel-calculations" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> <em>Dask</em> arrays and parallel calculations<a href="building-a-function-in-xarray.html#dask-arrays-and-parallel-calculations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dask-arrays-and-parallel-calculation" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> <em>Dask</em> arrays and parallel calculation<a href="building-a-function-in-xarray.html#dask-arrays-and-parallel-calculation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now, let’s create a function that calculates the e-folding time. First, we define this function with NumPy syntax.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="building-a-function-in-xarray.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> efold_numpy(array):</span>
 <span id="cb25-2"><a href="building-a-function-in-xarray.html#cb25-2" aria-hidden="true" tabindex="-1"></a>    ecorr <span class="op">=</span> np.correlate((array<span class="op">-</span>np.mean(array))<span class="op">/</span>np.std(array),(array<span class="op">-</span>np.mean(array))</span>

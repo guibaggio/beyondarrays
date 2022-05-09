@@ -1,7 +1,7 @@
 --- 
 title: "<center>_BEYOND ARRAYS_<center> A brief review of challenges in working with multi-dimensional downscaled climate data"
 author: "Guilherme Baggio"
-date: "7 May 2022"
+date: "6 May 2022"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
