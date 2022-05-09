@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> BEYOND ARRAYS A brief review of challenges in working with multidimensional downscaled climate data | _main.knit</title>
-  <meta name="description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <title> BEYOND ARRAYS A brief review of challenges in working with multi-dimensional downscaled climate data | _main.knit</title>
+  <meta name="description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" BEYOND ARRAYS A brief review of challenges in working with multidimensional downscaled climate data | _main.knit" />
+  <meta property="og:title" content=" BEYOND ARRAYS A brief review of challenges in working with multi-dimensional downscaled climate data | _main.knit" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <meta property="og:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" BEYOND ARRAYS A brief review of challenges in working with multidimensional downscaled climate data | _main.knit" />
+  <meta name="twitter:title" content=" BEYOND ARRAYS A brief review of challenges in working with multi-dimensional downscaled climate data | _main.knit" />
   
-  <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   
 
 <meta name="author" content="Guilherme Baggio" />
@@ -163,11 +163,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#dowscalling-climate-data"><i class="fa fa-check"></i><b>1.1</b> Dowscalling climate data</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#local-data-means-more-data"><i class="fa fa-check"></i><b>1.2</b> Local data means more data</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#working-with-xarray"><i class="fa fa-check"></i><b>1.3</b> Working with <em>xarray</em></a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html"><i class="fa fa-check"></i><b>2</b> Building a function in <em>xarray</em></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#working-with-xarray-1"><i class="fa fa-check"></i><b>2.1</b> Working with <em>xarray</em></a></li>
+<li class="chapter" data-level="2.1" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#working-with-xarray"><i class="fa fa-check"></i><b>2.1</b> Working with <em>xarray</em></a></li>
 <li class="chapter" data-level="2.2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#creating-a-simple-function-in-xarray"><i class="fa fa-check"></i><b>2.2</b> Creating a simple function in <em>xarray</em></a></li>
 <li class="chapter" data-level="2.3" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#multi-model-mean-in-xarray"><i class="fa fa-check"></i><b>2.3</b> Multi-model mean in <em>xarray</em></a></li>
 <li class="chapter" data-level="2.4" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#calculating-autocorrelation-lag-1"><i class="fa fa-check"></i><b>2.4</b> Calculating autocorrelation lag-1</a></li>
@@ -190,7 +189,7 @@ div.csl-indent {
             <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><center>
 <em>BEYOND ARRAYS</em>
 <center>
-A brief review of challenges in working with multidimensional downscaled climate data</a>
+A brief review of challenges in working with multi-dimensional downscaled climate data</a>
           </h1>
         </div>
 
@@ -202,13 +201,13 @@ A brief review of challenges in working with multidimensional downscaled climate
 <h1 class="title"><center>
 <em>BEYOND ARRAYS</em>
 <center>
-A brief review of challenges in working with multidimensional downscaled climate data</h1>
+A brief review of challenges in working with multi-dimensional downscaled climate data</h1>
 <p class="author"><em>Guilherme Baggio</em></p>
 <p class="date"><em>7 May 2022</em></p>
 </div>
 <div id="summary" class="section level1 unnumbered hasAnchor">
 <h1>Summary<a href="index.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Much of human society and infrastructure has been built on the assumption that future climate conditions, including average temperature, precipitation, and the frequency and intensity of extreme events, would follow a similar baseline path experienced in the past. Infrastructure design and maintenance, emergency response management, and long-term investment and planning are all affected by this assumption. Human activities, however, are increasing greenhouse gas emissions in the atmosphere. As a result, human-caused climate change is interacting and altering both new and old patterns of climate variability globally. In this context, climate change impact assessments have become a tool to describe these changes and their risks to society. While these assessments frequently deal with the impacts of complex, interconnected systems on local contexts, climate scientists seem to be on the edge of many shifts. For instance, decision-makers are increasingly interested in climate data services that address their local, specific needs. These services are often the result of partnerships between climate scientists and decision-makers, such as city planners, resource managers, health officials, and farmers, involving a range of interactions across multiple fields of study. Climate scientists also have to deal with progressively larger datasets. As high-resolution climate data become available, there has been a proliferation of new approaches to access and manipulate these data. <em>Pandas</em>, <em>xarray</em>, and <em>dask</em>, for instance, are libraries developed to handle complex data structures in the Python ecosystem. Yet, these libraries are considerably recent, and many developers, scientists, and students rely on online forums as a recourse to the frustrating errors caused by the calculations that far exceed the available space in their servers. As a brief contribution to this discussion, this report shares some learnings from working with downscaled climate data. To achieve this goal, <a href="introduction.html#introduction">Chapter 1</a> introduces some of the challenges experienced by climate scientists in their attempt to produce fit-for-purpose high-resolution climate data and concisely describes the importance of array programming. <a href="building-a-function-in-xarray.html#building-a-function-in-xarray">Chapter 2</a> provides a step-by-step guide to building a xarray function that enables a parallel execution of calculations. In the context of this study, this function calculates the autocorrelation lag-1 and e-folding time of daily temperature. Finally, the key takeaways summarize some of the development aspects of this study.</p>
+<p>Much of human society and infrastructure has been built on the assumption that future climate conditions, including average temperature, precipitation, and the frequency and intensity of extreme events, would follow a similar path experienced in the past. Infrastructure design and maintenance, emergency response management, and long-term investment and planning are all affected by this assumption. Human activities, however, are increasing greenhouse gas emissions in the atmosphere. As a result, human-caused climate change is interacting with and altering both new and old patterns of climate variability globally. In this context, climate change impact assessments have become a tool to describe these changes and their risks to society. While these assessments frequently deal with the impacts of complex, interconnected systems on local contexts, climate scientists seem to be on the edge of many shifts. For instance, decision-makers are increasingly interested in climate data services that address their local, specific needs. These services are often the result of partnerships between climate scientists and decision-makers, such as city planners, resource managers, health officials, and farmers, involving a range of interactions across multiple fields of study. Climate scientists also have to deal with large datasets. As high-resolution climate data become available, there has been a proliferation of new approaches to access and manipulate these data. <em>Xarray</em>, and <em>Dask</em>, for instance, are libraries developed to handle complex data, multi-dimensional structures in the Python ecosystem. Yet, these libraries are considerably recent, and many developers, scientists, and students rely on online forums as a recourse to the frustrating errors caused by the calculations that far exceed the available space in their machines and servers. As a brief contribution to this discussion, this report shares some learnings from working with downscaled climate data. To achieve this goal, <a href="introduction.html#introduction">Chapter 1</a> introduces some of the challenges experienced by climate scientists in their attempt to produce fit-for-purpose high-resolution climate data and concisely describes the importance of array programming. <a href="building-a-function-in-xarray.html#building-a-function-in-xarray">Chapter 2</a> provides a step-by-step guide to building an xarray function that enables parallel execution of calculations. In the context of this study, this function calculates the lag-1 autocorrelation and e-folding time of daily temperature.</p>
 
 </div>
             </section>
@@ -271,20 +270,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

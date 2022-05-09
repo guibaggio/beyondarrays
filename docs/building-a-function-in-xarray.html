@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Building a function in xarray | _main.knit</title>
-  <meta name="description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <meta name="description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Building a function in xarray | _main.knit" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <meta property="og:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 2 Building a function in xarray | _main.knit" />
   
-  <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multidimensional downscalled climate data." />
+  <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   
 
 <meta name="author" content="Guilherme Baggio" />
@@ -163,11 +163,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#dowscalling-climate-data"><i class="fa fa-check"></i><b>1.1</b> Dowscalling climate data</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#local-data-means-more-data"><i class="fa fa-check"></i><b>1.2</b> Local data means more data</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#working-with-xarray"><i class="fa fa-check"></i><b>1.3</b> Working with <em>xarray</em></a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html"><i class="fa fa-check"></i><b>2</b> Building a function in <em>xarray</em></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#working-with-xarray-1"><i class="fa fa-check"></i><b>2.1</b> Working with <em>xarray</em></a></li>
+<li class="chapter" data-level="2.1" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#working-with-xarray"><i class="fa fa-check"></i><b>2.1</b> Working with <em>xarray</em></a></li>
 <li class="chapter" data-level="2.2" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#creating-a-simple-function-in-xarray"><i class="fa fa-check"></i><b>2.2</b> Creating a simple function in <em>xarray</em></a></li>
 <li class="chapter" data-level="2.3" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#multi-model-mean-in-xarray"><i class="fa fa-check"></i><b>2.3</b> Multi-model mean in <em>xarray</em></a></li>
 <li class="chapter" data-level="2.4" data-path="building-a-function-in-xarray.html"><a href="building-a-function-in-xarray.html#calculating-autocorrelation-lag-1"><i class="fa fa-check"></i><b>2.4</b> Calculating autocorrelation lag-1</a></li>
@@ -190,7 +189,7 @@ div.csl-indent {
             <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><center>
 <em>BEYOND ARRAYS</em>
 <center>
-A brief review of challenges in working with multidimensional downscaled climate data</a>
+A brief review of challenges in working with multi-dimensional downscaled climate data</a>
           </h1>
         </div>
 
@@ -200,16 +199,17 @@ A brief review of challenges in working with multidimensional downscaled climate
             <section class="normal" id="section-">
 <div id="building-a-function-in-xarray" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Building a function in <em>xarray</em><a href="building-a-function-in-xarray.html#building-a-function-in-xarray" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="working-with-xarray-1" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Working with <em>xarray</em><a href="building-a-function-in-xarray.html#working-with-xarray-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Multi-dimensional arrays are an essential part of computational science. In Python, NumPy provides the fundamental syntax to work with this type of array. However, real-world datasets are usually more than just numbers. They often encode information about the location in space and time across multiple variables and provide qualitative information about of these data. Moreover, large datasets frequently require a faster computational execution of calculations not directly implemented in the NumPy library. In this context, the xarray library provides some of the key functionalities to work with large multi-dimensional arrays.</p>
-<p>Firstly, the xarray library introduces the concept of labels in the form of dimensions, coordinates, variables, and attributes assembled on top of NumPy-like arrays. The dimension label specifies the axes of the data, while coordinates are arrays along a dimension. Examples of coordinates include latitude, longitude, days, and months. The variables contain the actual data of the dataset, such as temperature, precipitation, and atmospheric pressure. They are assigned for all the dimensions in a way that associates coordinates with variable values. And the attributes provide the metadata. This structure provides a more intuitive, concise workflow while keeping the well-known NumPy syntax.</p>
+<div id="working-with-xarray" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Working with <em>xarray</em><a href="building-a-function-in-xarray.html#working-with-xarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Multi-dimensional arrays are an essential part of computational science. In Python, NumPy provides the fundamental syntax to work with this type of array. However, real-world datasets are usually more than just numbers. They often encode information about the location in space and time across multiple variables and provide qualitative information about these data. Moreover, large datasets frequently require a faster computational execution of calculations that is not directly implemented in the NumPy library. In this context, the xarray library provides some of the key functionalities to work with large multi-dimensional arrays.</p>
+<p>Firstly, the xarray library introduces the concept of labels in the form of dimensions, coordinates, variables, and attributes assembled on top of NumPy-like arrays. The dimension label specifies the axes of the data, while coordinates are arrays along a dimension. Examples of coordinates include latitude, longitude, days, and months. The variables contain the actual data of the dataset, such as temperature, precipitation, and atmospheric pressure. They are assigned for all the dimensions in a way that associates coordinates with variable values. And the attributes provide the metadata. This structure creates a more intuitive, concise workflow while keeping the well-known NumPy syntax.</p>
 <p>Secondly, the xarray library provides tools for working with NetCDF files commonly used in climate sciences. These files allow for storing multi-dimensional data such as temperature and precipitation. Each of these variables can be displayed spatially (by having one value per coordinate of latitude and longitude, for example) and throughout time (by having one value per day, month, or year, for example). The multi-dimensional nature of xarray structures makes them particularly suitable for dealing with labelled scientific data stored in netCDF files. The use of dimension names in xarray instead of NumPy-like axis labels creates a more instinctive coding practice.</p>
 <p>To organize the dimensions, coordinates, variables, and attributes of data, the xarray library has two fundamental data structures built upon the strengths of the NumPy and pandas libraries. A <em>DataArray</em> is the first structure defined by a multi-dimensional array with an underlying variable. Each DataArray contains dimensions, coordinates, and attributes of one variable only. <em>Datasets</em> are the second structure defined by a collection of DataArray objects aligned along with any number of shared dimensions. Since this structure is borrowed from the NetCDF file format, Datasets provide a more natural way to work with data stored in that type of file. Datasets also work as dictionaries, and most operations performed on the dimensions of a DataArray can be performed on Datasets as well.</p>
 </div>
 <div id="creating-a-simple-function-in-xarray" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Creating a simple function in <em>xarray</em><a href="building-a-function-in-xarray.html#creating-a-simple-function-in-xarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>First, let’s import the key libraries for creating a function that calculates the average temperature from daily data for each point in space defined by its coordinates <code>latitude</code> and <code>longitude</code>. This example shows how to use well-known Numpy functions, such as <code>mean()</code> an <code>std()</code>, in a xarray Dataset.</p>
+<p>Not let’s create a simple function on xarray. First, we should import the key libraries for creating a function that calculates the monthly mean temperature from daily data for each point in space defined by its coordinates <code>latitude</code> and <code>longitude</code>.</p>
+<p>This example shows how to use Numpy functions, such as <code>mean()</code> an <code>std()</code>, in a xarray Dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="building-a-function-in-xarray.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="building-a-function-in-xarray.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span></code></pre></div>
 <p>The following line uses the command <code>xr.open_dataset</code> to open the NetCDF file containing daily temperature for one year. This command will be important later when load a large file in chunks. For now, a simple line is sufficient.</p>
@@ -2250,7 +2250,7 @@ nan nan nan nan … nan nan nan nan
 <span id="cb6-33"><a href="building-a-function-in-xarray.html#cb6-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="figure">
 <img src="output_11_0.png" alt="" />
-<p class="caption">png</p>
+<p class="caption">Figure 1 - Monthly mean temperature</p>
 </div>
 <p>We can use the command <code>std('time')</code> to calculate the standard deviation of the temperature over the time dimension.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="building-a-function-in-xarray.html#cb7-1" aria-hidden="true" tabindex="-1"></a>t_std <span class="op">=</span> t_daily.groupby(<span class="st">&#39;time.month&#39;</span>).std(<span class="st">&#39;time&#39;</span>).rename({<span class="st">&quot;tasmax&quot;</span>: <span class="st">&quot;t_std&quot;</span>})</span></code></pre></div>
@@ -2916,7 +2916,7 @@ nan nan nan nan … nan nan nan nan
 <span id="cb9-33"><a href="building-a-function-in-xarray.html#cb9-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="figure">
 <img src="output_17_0.png" alt="" />
-<p class="caption">png</p>
+<p class="caption">Figure 2 - Seasonal mean temperature</p>
 </div>
 </div>
 <div id="multi-model-mean-in-xarray" class="section level2 hasAnchor" number="2.3">
@@ -3692,7 +3692,7 @@ numpy.ndarray
 <span id="cb15-21"><a href="building-a-function-in-xarray.html#cb15-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="figure">
 <img src="output_15_0.png" alt="" />
-<p class="caption">Figure 1 - Mean temperature calculated for each GCM</p>
+<p class="caption">Figure 3 - Mean temperature calculated for each GCM</p>
 </div>
 <p>The beauty of creating a new dimension <code>model</code> to store the values for each model is that we can easily calculate the multi-model ensemble mean temperature by simply executing the operation <code>mean()</code> over the model dimension.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="building-a-function-in-xarray.html#cb16-1" aria-hidden="true" tabindex="-1"></a>t_ensemble <span class="op">=</span> t_model_monthly.mean(<span class="st">&#39;model&#39;</span>)</span></code></pre></div>
@@ -4292,7 +4292,7 @@ nan nan nan nan … nan nan nan nan
 <span id="cb17-20"><a href="building-a-function-in-xarray.html#cb17-20" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Multi-Model Ensemble Mean Temperature ($^{\circ}$C)&#39;</span>,pad <span class="op">=</span> <span class="dv">15</span>,fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>,size<span class="op">=</span><span class="dv">16</span>)</span></code></pre></div>
 <div class="figure">
 <img src="output_19_1.png" alt="" />
-<p class="caption">Figure 2 - Multi-model mean temperature</p>
+<p class="caption">Figure 4 - Multi-model ensemble mean temperature</p>
 </div>
 </div>
 <div id="calculating-autocorrelation-lag-1" class="section level2 hasAnchor" number="2.4">
@@ -5589,7 +5589,7 @@ nan nan nan nan … nan nan nan nan
 <span id="cb24-19"><a href="building-a-function-in-xarray.html#cb24-19" aria-hidden="true" tabindex="-1"></a>             pad <span class="op">=</span> <span class="dv">15</span>,fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>,size<span class="op">=</span><span class="dv">16</span>)</span></code></pre></div>
 <div class="figure">
 <img src="output_16_1.png" alt="" />
-<p class="caption">png</p>
+<p class="caption">Figure 5 - Multi-model ensemble lag-1 autocorrelation</p>
 </div>
 </div>
 <div id="dask-arrays-and-parallel-calculations" class="section level2 hasAnchor" number="2.5">
@@ -5601,7 +5601,8 @@ nan nan nan nan … nan nan nan nan
 <span id="cb25-4"><a href="building-a-function-in-xarray.html#cb25-4" aria-hidden="true" tabindex="-1"></a>    lag1 <span class="op">=</span> ecorr[<span class="bu">int</span>(<span class="bu">len</span>(ecorr)<span class="op">/</span><span class="dv">2</span>)<span class="op">+</span><span class="dv">1</span>]</span>
 <span id="cb25-5"><a href="building-a-function-in-xarray.html#cb25-5" aria-hidden="true" tabindex="-1"></a>    efold_numpy <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">/</span>np.log(lag1)</span>
 <span id="cb25-6"><a href="building-a-function-in-xarray.html#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> efold_numpy</span></code></pre></div>
-<p>Now, we are going to use the function <code>xr.apply_ufunc</code> and there are two important features to consider when using Dask. Firstly, we have to execute parallel calculation by including <code>dask="parallelized"</code> and <code>allow_rechunk = True</code> in the function.</p>
+<p>We are going to use the function <code>xr.apply_ufunc</code> again. However, there are two important features to consider when using Dask.</p>
+<p>Firstly, we have to execute parallel calculation by including <code>dask="parallelized"</code> and <code>allow_rechunk = True</code> in the function.</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="building-a-function-in-xarray.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> efold_xarray(array):</span>
 <span id="cb26-2"><a href="building-a-function-in-xarray.html#cb26-2" aria-hidden="true" tabindex="-1"></a>    efold_xarray <span class="op">=</span> xr.apply_ufunc(</span>
 <span id="cb26-3"><a href="building-a-function-in-xarray.html#cb26-3" aria-hidden="true" tabindex="-1"></a>            efold_numpy, </span>
@@ -5614,6 +5615,7 @@ nan nan nan nan … nan nan nan nan
 <span id="cb26-10"><a href="building-a-function-in-xarray.html#cb26-10" aria-hidden="true" tabindex="-1"></a>            output_dtypes<span class="op">=</span>[array[<span class="st">&#39;tasmax&#39;</span>].dtype]).rename({<span class="st">&quot;tasmax&quot;</span>: <span class="st">&quot;efold&quot;</span>})</span>
 <span id="cb26-11"><a href="building-a-function-in-xarray.html#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> efold_xarray</span></code></pre></div>
 <p>Secondly, we have to define the size of our chunks when opening the NetCDF files. By specifying the chunk shape, xarray will automatically create Dask arrays for each data variable in the Dataset.</p>
+<p>In this case, the chunck size is defined when loading the NetCDF file with the <code>xr.open_dataset</code> function. Since we are calculating the variable over the time dimension, we need to specify chuncks of latitude and longitude. The chuncks are created, thus, by setting the shape an specific shape on those dimensions, <code>chunks={"lat": 150, "lon": 200}</code>.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="building-a-function-in-xarray.html#cb27-1" aria-hidden="true" tabindex="-1"></a>efold_model <span class="op">=</span> []</span>
 <span id="cb27-2"><a href="building-a-function-in-xarray.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="building-a-function-in-xarray.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> file_name <span class="kw">in</span> multimodel:</span>
@@ -6308,9 +6310,9 @@ numpy.ndarray
 </ul>
 </div>
 </div>
-<p>As you probably noticed, it took a few seconds (or less) to execute the <code>efold_xarray</code> and create a new Dataset with the variable <code>efold</code> and a new dimension <code>model</code>. From a user standpoint, the key concept of a <code>dask.array</code> is the notion of chunk. A chunk is the user-defined shape of the subdataset on which the unitary tasks will be applied.</p>
-<p>Building upon dask has several advantages. For instance, the only modification of your code that is needed is your defining the chunks on which the computation should be performed. The Dask library also allows to easily leverage the resources of shared memory architectures (multi-core laptop or work-station) but also the resources of distributed memory architectures (clusters of cpu).</p>
-<p>Yet, parallelization comes at a cost. Loading the data with dask.arrays is only done at the execution time if needed. This means that we have access to this Dataset without having to worry about time time it will take to load the data. The chunks also have implications on the performance of the code. If the chunks are too small, queueing up operations will be extremely slow, because Dask will translate each operation into a huge number of operations mapped across chunks. If the chunks are too big, some of the computation power may be wasted, because Dask only computes results one chunk at a time.</p>
+<p>As you probably noticed, it took a few seconds (or less) to execute the <code>efold_xarray</code> and create a new Dataset with the variable <code>efold</code> and a new dimension <code>model</code>. From an user standpoint, the key concept of a <code>dask.array</code> is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.</p>
+<p>Building upon Dask has several advantages. For instance, defining the chunks on which the computation will be performed is only modification needed in the code. The Dask library also allows for easily leveraging the resources of shared memory architectures (multi-core laptop or work-station) and resources of distributed memory architectures (clusters of cpu).</p>
+<p>Yet, parallelization comes at a cost. Loading the data with <code>dask.arrays</code> is only done at the execution time if needed. This means that we have access to the Dataset without having to worry about the time it will take to load the data, but it will not simply reduce the time that it takes to load the data. The chunks also have implications on the performance of the code. If the chunks are too small, queueing up operations will be extremely slow, because Dask will translate each operation into a huge number of operations mapped across chunks. If the chunks are too big, some of the computation power may be wasted, because Dask only computes results one chunk at a time.</p>
 
 </div>
 </div>
@@ -6374,20 +6376,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 --- 
-title: "<center>_BEYOND ARRAYS_<center> A brief review of challenges in working with multidimensional downscaled climate data"
+title: "<center>_BEYOND ARRAYS_<center> A brief review of challenges in working with multi-dimensional downscaled climate data"
 author: "Guilherme Baggio"
 date: "7 May 2022"
 site: bookdown::bookdown_site
@@ -9,7 +9,7 @@ biblio-style: apalike
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This document contains some reflections on the challenges of using of multidimensional downscalled climate data.
+  This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data.
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
@@ -28,13 +28,9 @@ Nonetheless, many challenges have been identified in the long chain that ties cl
 
 Climate scientists face another challenge. As downscaled climate data services become available, such as the _Copernicus Climate Change Service_, operated by the European Centre for Medium-Range Weather Forecasts, and _ClimateData.ca_, a consortium of Canadian governmental and research organizations, the interest towards climate data for specific, local decision-making processes will likely increase [@Morand2015; @Buontempo2020]. From a computational perspective, this challenge translates to an “explosion in data from numerical climate model simulations, which have increased greatly in complexity and size” [@Overpeck2011].
 
-To analyse, process, and present climate data, _array programming_ offers a powerful and compact syntax for accessing, manipulating, and operating data. For instance, _NumPy, the most common array programming library for the Python language, has played a key role in the development of science over the last decades that  [@Harris2020]. This library developed in the mid-1990s provided a structure that efficiently stores and accesses data in vectors, matrices, and higher-dimensional arrays and enables a wide variety of scientific computations [@vanderWalt2011]. It also operates on in-memory arrays using the central processing unit (CPU), which means that the library runs on simple embedded devices as well as the world’s largest computers. In this context, the Python ecosystem has proved extremely effective as a platform for climate scientists, and several packages have been developed over time to address specific needs, such as _ClimLab_, _CliMetLab_, _PyGeode_, and _MetPy_.
+To analyse, process, and present climate data, _array programming_ offers a powerful and compact syntax for accessing, manipulating, and operating data. For instance, _NumPy_, one of the most common array programming libraries in the Python ecosystem, has played a key role in the development of science over the last decades that  [@Harris2020]. Developed in the mid-1990s, this library  provides a structure that efficiently stores and accesses data in vectors, matrices, and higher-dimensional arrays and enables a wide variety of scientific computations [@vanderWalt2011]. It also operates on in-memory arrays using the central processing unit (CPU), which means that the library can run on simple embedded devices as well as on the world’s largest computers. In this context, the Python ecosystem has proved extremely effective as a platform for climate scientists, and several packages have been developed over time to address specific needs in climate science, such as _ClimLab_, _CliMetLab_, _PyGeode_, and _MetPy_.
 
 However, downscaled climate data, as any large dataset, can easily exceed the memory capacity of a single machine. This issue has been accompanied by the emergence of new approaches to handle large amounts of data, including distributed data and parallel execution of graphics processing units (GPUs) and tensor processing units (TPUs). Whereas NumPy's inability to utilize such approaches due to its in-memory data functioning led to a "gap between available modern hardware architectures and the tools necessary to leverage their computational power” [@Harris2020], the scientific community’s efforts to fill this gap contributed to a proliferation of new array implementations, including _pandas_ in 2008, _xarray_ in 2014, and _dask_ in 2018.
-
-## Working with _xarray_
-
-
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

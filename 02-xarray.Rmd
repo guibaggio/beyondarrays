@@ -2,9 +2,9 @@
 
 ## Working with _xarray_
 
-Multi-dimensional arrays are an essential part of computational science. In Python, NumPy provides the fundamental syntax to work with this type of array. However, real-world datasets are usually more than just numbers. They often encode information about the location in space and time across multiple variables and provide qualitative information about of these data. Moreover, large datasets frequently require a faster computational execution of calculations not directly implemented in the NumPy library. In this context, the xarray library provides some of the key functionalities to work with large multi-dimensional arrays.
+Multi-dimensional arrays are an essential part of computational science. In Python, NumPy provides the fundamental syntax to work with this type of array. However, real-world datasets are usually more than just numbers. They often encode information about the location in space and time across multiple variables and provide qualitative information about these data. Moreover, large datasets frequently require a faster computational execution of calculations that is not directly implemented in the NumPy library. In this context, the xarray library provides some of the key functionalities to work with large multi-dimensional arrays.
 
-Firstly, the xarray library introduces the concept of labels in the form of dimensions, coordinates, variables, and attributes assembled on top of NumPy-like arrays. The dimension label specifies the axes of the data, while coordinates are arrays along a dimension. Examples of coordinates include latitude, longitude, days, and months. The variables contain the actual data of the dataset, such as temperature, precipitation, and atmospheric pressure. They are assigned for all the dimensions in a way that associates coordinates with variable values. And the attributes provide the metadata. This structure provides a more intuitive, concise workflow while keeping the well-known NumPy syntax.
+Firstly, the xarray library introduces the concept of labels in the form of dimensions, coordinates, variables, and attributes assembled on top of NumPy-like arrays. The dimension label specifies the axes of the data, while coordinates are arrays along a dimension. Examples of coordinates include latitude, longitude, days, and months. The variables contain the actual data of the dataset, such as temperature, precipitation, and atmospheric pressure. They are assigned for all the dimensions in a way that associates coordinates with variable values. And the attributes provide the metadata. This structure creates a more intuitive, concise workflow while keeping the well-known NumPy syntax.
 
 Secondly, the xarray library provides tools for working with NetCDF files commonly used in climate sciences. These files allow for storing multi-dimensional data such as temperature and precipitation. Each of these variables can be displayed spatially (by having one value per coordinate of latitude and longitude, for example) and throughout time (by having one value per day, month, or year, for example). The multi-dimensional nature of xarray structures makes them particularly suitable for dealing with labelled scientific data stored in netCDF files. The use of dimension names in xarray instead of NumPy-like axis labels creates a more instinctive coding practice.
 
@@ -12,7 +12,9 @@ To organize the dimensions, coordinates, variables, and attributes of data, the 
 
 ## Creating a simple function in _xarray_
 
-First, let's import the key libraries for creating a function that calculates the average temperature from daily data for each point in space defined by its coordinates ```latitude``` and ```longitude```. This example shows how to use well-known Numpy functions, such as ```mean()``` an ```std()```, in a xarray Dataset.
+Not let's create a simple function on xarray. First, we should import the key libraries for creating a function that calculates the monthly mean temperature from daily data for each point in space defined by its coordinates ```latitude``` and ```longitude```.
+
+This example shows how to use Numpy functions, such as ```mean()``` an ```std()```, in a xarray Dataset.
 
 
 ```python
@@ -1288,7 +1290,7 @@ plt.show()
 
 
     
-![png](output_11_0.png)
+![Figure 1 - Monthly mean temperature](output_11_0.png)
     
 
 
@@ -1744,7 +1746,7 @@ plt.show()
 
 
     
-![png](output_17_0.png)
+![Figure 2 - Seasonal mean temperature](output_17_0.png)
     
 ## Multi-model mean in _xarray_
 
@@ -2284,7 +2286,7 @@ plt.show()
 
 
     
-![Figure 1 - Mean temperature calculated for each GCM](output_15_0.png)
+![Figure 3 - Mean temperature calculated for each GCM](output_15_0.png)
     
 
 
@@ -2692,7 +2694,7 @@ out.set_label('Temperature ($^{\circ}$C)',size=14)
 ax.set_title('Multi-Model Ensemble Mean Temperature ($^{\circ}$C)',pad = 15,fontweight='bold',size=16)
 ```
     
-![Figure 2 - Multi-model mean temperature](output_19_1.png)
+![Figure 4 - Multi-model ensemble mean temperature](output_19_1.png)
 
 ## Calculating autocorrelation lag-1
 
@@ -3579,7 +3581,7 @@ ax.set_title('Multi-Model Ensemble Lag-1 Autocorrelation',
 ```
 
     
-![png](output_16_1.png)
+![Figure 5 - Multi-model ensemble lag-1 autocorrelation](output_16_1.png)
 
 ## _Dask_ arrays and parallel calculations
 
@@ -3594,8 +3596,9 @@ def efold_numpy(array):
     return efold_numpy
 ```
 
-Now, we are going to use the function ```xr.apply_ufunc``` and there are two important features to consider when using Dask. Firstly, we have to execute parallel calculation by including ```dask="parallelized"``` and ```allow_rechunk = True``` in the function.
+We are going to use the function ```xr.apply_ufunc``` again. However, there are two important features to consider when using Dask. 
 
+Firstly, we have to execute parallel calculation by including ```dask="parallelized"``` and ```allow_rechunk = True``` in the function.
 
 ```python
 def efold_xarray(array):
@@ -3611,8 +3614,9 @@ def efold_xarray(array):
     return efold_xarray
 ```
 
-Secondly, we have to define the size of our chunks when opening the NetCDF files. By specifying the chunk shape, xarray will automatically create Dask arrays for each data variable in the Dataset.
+Secondly, we have to define the size of our chunks when opening the NetCDF files. By specifying the chunk shape, xarray will automatically create Dask arrays for each data variable in the Dataset. 
 
+In this case, the chunck size is defined when loading the NetCDF file with the ```xr.open_dataset``` function. Since we are calculating the variable over the time dimension, we need to specify chuncks of latitude and longitude. The chuncks are created, thus, by setting the shape an specific shape on those dimensions, ```chunks={"lat": 150, "lon": 200}```.
 
 ```python
 efold_model = []
@@ -4108,13 +4112,8 @@ Data variables:
 </table></div></li></ul></div></li><li class='xr-section-item'><input id='section-c407c865-2b27-48e1-91a3-5b1a1daaf565' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c407c865-2b27-48e1-91a3-5b1a1daaf565' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div>
 
 
+As you probably noticed, it took a few seconds (or less) to execute the ```efold_xarray``` and create a new Dataset with the variable ```efold``` and a new dimension ```model```. From an user standpoint, the key concept of a ```dask.array``` is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.
 
-As you probably noticed, it took a few seconds (or less) to execute the ```efold_xarray``` and create a new Dataset with the variable ```efold``` and a new dimension ```model```. From a user standpoint, the key concept of a ```dask.array``` is the notion of chunk. A chunk is the user-defined shape of the subdataset on which the unitary tasks will be applied.
+Building upon Dask has several advantages. For instance, defining the chunks on which the computation will be performed is only modification needed in the code. The Dask library also allows for easily leveraging the resources of shared memory architectures (multi-core laptop or work-station) and resources of distributed memory architectures (clusters of cpu).
 
-Building upon dask has several advantages. For instance, the only modification of your code that is needed is your defining the chunks on which the computation should be performed. The Dask library also allows to easily leverage the resources of shared memory architectures (multi-core laptop or work-station) but also the resources of distributed memory architectures (clusters of cpu).
-
-Yet, parallelization comes at a cost. Loading the data with dask.arrays is only done at the execution time if needed. This means that we have access to this Dataset without having to worry about time time it will take to load the data. The chunks also have implications on the performance of the code. If the chunks are too small, queueing up operations will be extremely slow, because Dask will translate each operation into a huge number of operations mapped across chunks. If the chunks are too big, some of the computation power may be wasted, because Dask only computes results one chunk at a time. 
-
-
-
-
+Yet, parallelization comes at a cost. Loading the data with  ```dask.arrays ``` is only done at the execution time if needed. This means that we have access to the Dataset without having to worry about the time it will take to load the data, but it will not simply reduce the time that it takes to load the data. The chunks also have implications on the performance of the code. If the chunks are too small, queueing up operations will be extremely slow, because Dask will translate each operation into a huge number of operations mapped across chunks. If the chunks are too big, some of the computation power may be wasted, because Dask only computes results one chunk at a time. 
