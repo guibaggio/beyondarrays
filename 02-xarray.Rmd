@@ -2698,7 +2698,7 @@ ax.set_title('Multi-Model Ensemble Mean Temperature ($^{\circ}$C)',pad = 15,font
 
 ## Calculating autocorrelation lag-1
 
-In the last two section, we saw how to use the well-defined NumPy operations ```mean()``` and ```std()``` in a Dataset over the dimension ```time```. Now, how would we create new a function that is not defined in the NumPy library? Let's try first with the lag-1 autocorrelation. 
+In the last two sections, we saw how to use the well-defined NumPy operations ```mean()``` and ```std()``` in a Dataset over the dimension ```time```. Now, how would we create new a function that is not defined in the NumPy library? Let's try first with the lag-1 autocorrelation. 
 
 First, let's define create a new function ```lag1_numpy``` by using the NumPy syntax.
 
