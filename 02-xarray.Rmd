@@ -4112,7 +4112,7 @@ Data variables:
 </table></div></li></ul></div></li><li class='xr-section-item'><input id='section-c407c865-2b27-48e1-91a3-5b1a1daaf565' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c407c865-2b27-48e1-91a3-5b1a1daaf565' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div>
 
 
-As you probably noticed, it took a few seconds (or less) to execute the ```efold_xarray``` and create a new Dataset with the variable ```efold``` and a new dimension ```model```. From an user standpoint, the key concept of a ```dask.array``` is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.
+Now, it took a few seconds (or less) to execute the ```efold_xarray``` and create a new Dataset with the variable ```efold``` and a new dimension ```model```. From an user standpoint, the key concept of a ```dask.array``` is the notion of chunk. We can see the chunks as being subdataset with user-defined shape on which the unitary tasks will be applied.
 
 Building upon Dask has several advantages. For instance, defining the chunks on which the computation will be performed is only modification needed in the code. The Dask library also allows for easily leveraging the resources of shared memory architectures (multi-core laptop or work-station) and resources of distributed memory architectures (clusters of cpu).
 
