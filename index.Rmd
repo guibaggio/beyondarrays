@@ -30,7 +30,7 @@ To contribute to this effort, this document shares some of my learnings from wor
 
 Finally, for anyone curious, the title of this document is a reference to my amusement and intrigue with the potential of _Xarray_ and _Dask_ to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits. You can also reach out to me at guillaume.baggio@mail.utoronto.ca.
 
-_Recommended citation_: Baggio, G. (2023). Beyond arrays: Finding solutions to work with high-definition multi-dimensional climate data. Published through Github. Available at: https://guibaggio.github.io/beyondarrays/ 
+_Suggested citation_: Baggio, G. (2023). Beyond arrays: Finding solutions to work with high-definition multi-dimensional climate data. Published through Github. Available at: https://guibaggio.github.io/beyondarrays/ 
 
 <!-- # About -->
 
