@@ -6,15 +6,17 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
+csl: apa-single-spaced.csl
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
-description: |
-  This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data.
+#description: |
+#  This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data.
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+# github-repo: rstudio/bookdown-demo
+
 ---
 
-# Summary {-}
+# Preface {-}
 
 Reliable climate data are crucial for various activities, including agriculture, energy production, transportation, and disaster preparedness. However, obtaining and processing high-definition climate data can pose significant challenges due to the computational time and data complexity involved. High-definition climate data sets are typically large and complex, containing multiple variables, temporal and spatial resolutions, and formats. Processing these data often requires significant computing power and storage resources, which can be expensive and time-consuming. Moreover, the process of cleaning, quality-checking, and preprocessing data to ensure their accuracy and consistency adds to the challenge of using high-definition multi-dimensional climate data.
 
@@ -24,9 +26,9 @@ In addition to the challenges of working with high-definition climate data, the 
 
 However, working with emerging Python packages, such as _Xarray_ and _Dask_, can also present some challenges. These packages often require a certain level of technical expertise and may have a steeper learning curve compared to more traditional data processing tools. Additionally, debugging errors or performance issues can be more difficult with these packages, as they are still in active development and may have limited documentation or support. Incorporating these tools into existing workflows and processes may also require significant adjustments and changes to established practices.
 
-To contribute to this effort, this document shares some of my learnings from working with high-definition multi-dimensional climate data. As I continue to work with Xarray and Dask, this document will be updated and expanded to provide more insights and practical solutions for working with these packages. [Chapter 1](#introduction) introduces some of the challenges experienced by climate experts using high-resolution climate data and discusses the importance of array programming. [Chapter 2](#building-a-function-in-xarray) provides a step-by-step guide to building a _Xarray_ function that enables parallel execution of calculations. For now, this document only presents a function that calculates the lag-1 autocorrelation and e-folding time of daily temperature, but more functions will be added in the future.
+To contribute to this effort, this document shares some of my learnings from working with high-definition multi-dimensional climate data. As I continue to work with Xarray and Dask, this document will be updated and expanded to provide more insights and practical solutions for working with these packages. [Chapter 1](#introduction) introduces some of the challenges experienced by climate experts using high-resolution climate data and discusses the importance of array programming. [Chapter 2](#building-a-function-in-xarray) provides a step-by-step guide to building a _Xarray_ function that enables parallel execution of calculations with _Dask_. For now, this document only presents a function that calculates the lag-1 autocorrelation and e-folding time of daily temperature, but more functions will be added in the future.
 
-And to anyone curious, the title of this document, _Beyond Arrays_, is a reference to my amusement and intrigue with the potential of _Xarray_ and _Dask_ to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits.
+Finally, for anyone curious, the title of this document is a reference to my amusement and intrigue with the potential of _Xarray_ and _Dask_ to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits. You can also reach out to me at guillaume.baggio@mail.utoronto.ca.
 
 <!-- # About -->
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Footnotes and citations | BEYOND ARRAYS</title>
+  <title>References | BEYOND ARRAYS</title>
   <meta name="description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Footnotes and citations | BEYOND ARRAYS" />
+  <meta property="og:title" content="References | BEYOND ARRAYS" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Footnotes and citations | BEYOND ARRAYS" />
+  <meta name="twitter:title" content="References | BEYOND ARRAYS" />
   
   <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="dask-arrays-and-parallel-calculation.html"/>
-<link rel="next" href="blocks.html"/>
+<link rel="prev" href="sharing-your-book.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,13 +164,13 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#dowscalling-climate-data"><i class="fa fa-check"></i><b>1.1</b> Dowscalling climate data</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#local-data-means-more-data"><i class="fa fa-check"></i><b>1.2</b> Local data means more data</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html"><i class="fa fa-check"></i><b>2</b> Building a function with <em>xarray</em></a>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#creating-a-simple-function"><i class="fa fa-check"></i><b>2.1</b> Creating a simple function</a></li>
-<li class="chapter" data-level="2.2" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#calculating-the-multi-model-ensemble-mean"><i class="fa fa-check"></i><b>2.2</b> Calculating the multi-model ensemble mean</a></li>
-<li class="chapter" data-level="2.3" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#calculating-autocorrelation-lag-1"><i class="fa fa-check"></i><b>2.3</b> Calculating autocorrelation lag-1</a></li>
+<li class="chapter" data-level="2.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>2.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="2.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>2.2</b> Captioned figures and tables</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="dask-arrays-and-parallel-calculation.html"><a href="dask-arrays-and-parallel-calculation.html"><i class="fa fa-check"></i><b>3</b> <em>Dask</em> arrays and parallel calculation</a></li>
+<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
 <li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
@@ -188,7 +188,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
 <li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -209,43 +209,85 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="footnotes-and-citations" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Footnotes and citations<a href="footnotes-and-citations.html#footnotes-and-citations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="footnotes" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Footnotes<a href="footnotes-and-citations.html#footnotes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Footnotes are put inside the square brackets after a caret <code>^[]</code>. Like this one <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-</div>
-<div id="citations" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Citations<a href="footnotes-and-citations.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Reference items in your bibliography file(s) using <code>@key</code>.</p>
-<p>For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown" role="doc-biblioref">Xie 2023</a>)</span> (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span> (this citation was added manually in an external file book.bib).
-Note that the <code>.bib</code> files need to be listed in the index.Rmd with the YAML <code>bibliography</code> key.</p>
-<p>The RStudio Visual Markdown Editor can also make it easier to insert citations: <a href="https://rstudio.github.io/visual-markdown-editing/#/citations" class="uri">https://rstudio.github.io/visual-markdown-editing/#/citations</a></p>
+<div id="references-1" class="section level1 unnumbered hasAnchor">
+<h1>References<a href="references-1.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-xie2015" class="csl-entry">
+<div class="csl-entry">
+Briley, Laura, Daniel Brown, and Scott E. Kalafatis. 2015. <span>“Overcoming Barriers During the Co-Production of Climate Information for Decision-Making.”</span> <em>Climate Risk Management</em> 9: 41–49. <a href="https://doi.org/10.1016/j.crm.2015.04.004">https://doi.org/10.1016/j.crm.2015.04.004</a>.
+</div>
+<div class="csl-entry">
+Buontempo, Carlo, Ronald Hutjes, Philip Beavis, Julie Berckmans, Chiara Cagnazzo, Freja Vamborg, Jean-Noël Thépaut, et al. 2020. <span>“Fostering the Development of Climate Services Through Copernicus Climate Change Service (C3S) for Agriculture Applications.”</span> <em>Weather and Climate Extremes</em> 27 (March): 100226. <a href="https://doi.org/10.1016/j.wace.2019.100226">https://doi.org/10.1016/j.wace.2019.100226</a>.
+</div>
+<div class="csl-entry">
+Cannon, Alex J., Stephen R. Sobie, and Trevor Q. Murdock. 2015. <span>“Bias Correction of GCM Precipitation by Quantile Mapping: How Well Do Methods Preserve Changes in Quantiles and Extremes?”</span> <em>Journal of Climate</em> 28 (17): 6938–59. <a href="https://doi.org/10.1175/JCLI-D-14-00754.1">https://doi.org/10.1175/JCLI-D-14-00754.1</a>.
+</div>
+<div class="csl-entry">
+Cash, David W., Jonathan C. Borck, and Anthony G. Patt. 2006. <span>“Countering the Loading-Dock Approach to Linking Science and Decision Making.”</span> <em>Science, Technology, Human Values</em> 31 (4): 465–94. <a href="https://doi.org/10.1177/0162243906287547">https://doi.org/10.1177/0162243906287547</a>.
+</div>
+<div class="csl-entry">
+Gutowski, W. J., P. A. Ullrich, A. Hall, L. R. Leung, T. A. O’Brien, C. M. Patricola, R. W. Arritt, et al. 2020. <span>“The Ongoing Need for High-Resolution Regional Climate Models: Process Understanding and Stakeholder Information.”</span> <em>Bulletin of the American Meteorological Society</em> 101 (5): E664–83. <a href="https://doi.org/10.1175/bams-d-19-0113.1">https://doi.org/10.1175/bams-d-19-0113.1</a>.
+</div>
+<div class="csl-entry">
+Harris, Charles R., K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, et al. 2020. <span>“Array Programming with <span>NumPy</span>.”</span> <em>Nature</em> 585 (7825): 357–62. <a href="https://doi.org/10.1038/s41586-020-2649-2">https://doi.org/10.1038/s41586-020-2649-2</a>.
+</div>
+<div class="csl-entry">
+Lafferty, David C., Ryan L. Sriver, Iman Haqiqi, Thomas W. Hertel, Klaus Keller, and Robert E. Nicholas. 2021. <span>“Statistically Bias-Corrected and Downscaled Climate Models Underestimate the Adverse Effects of Extreme Heat on u.s. Maize Yields.”</span> <em>Communications Earth Environment</em> 2 (1). <a href="https://doi.org/10.1038/s43247-021-00266-9">https://doi.org/10.1038/s43247-021-00266-9</a>.
+</div>
+<div class="csl-entry">
+Lemos, Maria Carmen, Christine J. Kirchhoff, and Vijay Ramprasad. 2012. <span>“Narrowing the Climate Information Usability Gap.”</span> <em>Nature Climate Change</em> 2 (11): 789–94. <a href="https://doi.org/10.1038/nclimate1614">https://doi.org/10.1038/nclimate1614</a>.
+</div>
+<div class="csl-entry">
+Luca, Alejandro Di, Ramón de Elı́a, and René Laprise. 2015. <span>“Challenges in the Quest for Added Value of Regional Climate Dynamical Downscaling.”</span> <em>Current Climate Change Reports</em> 1 (1): 10–21. <a href="https://doi.org/10.1007/s40641-015-0003-9">https://doi.org/10.1007/s40641-015-0003-9</a>.
+</div>
+<div class="csl-entry">
+Meyer, Ryan. 2011. <span>“The Public Values Failures of Climate Science in the <span>US</span>.”</span> <em>Minerva</em> 49 (1): 47–70. <a href="https://doi.org/10.1007/s11024-011-9164-4">https://doi.org/10.1007/s11024-011-9164-4</a>.
+</div>
+<div class="csl-entry">
+Morand, C. A., Douglas A., and J. Richard. 2015. <span>“A Survey of Climate Information Needs Among Users in Ontario, Canada.”</span> <a href="http://www.climateontario.ca/doc/Survey/ClimateInformationNeedsSurveyResults-OCCIAR.pdf">http://www.climateontario.ca/doc/Survey/ClimateInformationNeedsSurveyResults-OCCIAR.pdf</a>.
+</div>
+<div class="csl-entry">
+Navarro-Racines, Carlos, Jaime Tarapues, Philip Thornton, Andy Jarvis, and Julian Ramirez-Villegas. 2020. <span>“High-Resolution and Bias-Corrected <span>CMIP</span>5 Projections for Climate Change Impact Assessments.”</span> <em>Scientific Data</em> 7 (1). <a href="https://doi.org/10.1038/s41597-019-0343-8">https://doi.org/10.1038/s41597-019-0343-8</a>.
+</div>
+<div class="csl-entry">
+Orr, H. G., M. Ekström, M. B. Charlton, K. L. Peat, and H. J. Fowler. 2021. <span>“Using High-Resolution Climate Change Information in Water Management: A Decision-Makers<span></span> Perspective.”</span> <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em> 379 (2195): 20200219. <a href="https://doi.org/10.1098/rsta.2020.0219">https://doi.org/10.1098/rsta.2020.0219</a>.
+</div>
+<div class="csl-entry">
+Overpeck, Jonathan T., Gerald A. Meehl, Sandrine Bony, and David R. Easterling. 2011. <span>“Climate Data Challenges in the 21st Century.”</span> <em>Science</em> 331 (6018): 700–702. <a href="https://doi.org/10.1126/science.1197869">https://doi.org/10.1126/science.1197869</a>.
+</div>
+<div class="csl-entry">
+Roberts, M. J., P. L. Vidale, C. Senior, H. T. Hewitt, C. Bates, S. Berthou, P. Chang, et al. 2018. <span>“The Benefits of Global High Resolution for Climate Simulation: Process Understanding and the Enabling of Stakeholder Decisions at the Regional Scale.”</span> <em>Bulletin of the American Meteorological Society</em> 99 (11): 2341–59. <a href="https://doi.org/10.1175/bams-d-15-00320.1">https://doi.org/10.1175/bams-d-15-00320.1</a>.
+</div>
+<div class="csl-entry">
+Smid, Marek, and Ana Cristina Costa. 2017. <span>“Climate Projections and Downscaling Techniques: A Discussion for Impact Studies in Urban Systems.”</span> <em>International Journal of Urban Sciences</em> 22 (3): 277–307. <a href="https://doi.org/10.1080/12265934.2017.1409132">https://doi.org/10.1080/12265934.2017.1409132</a>.
+</div>
+<div class="csl-entry">
+Walt, Stéfan van der, S Chris Colbert, and Gaël Varoquaux. 2011. <span>“The <span>NumPy</span> Array: A Structure for Efficient Numerical Computation.”</span> <em>Computing in Science Engineering</em> 13 (2): 22–30. <a href="https://doi.org/10.1109/mcse.2011.37">https://doi.org/10.1109/mcse.2011.37</a>.
+</div>
+<div class="csl-entry">
+Werner, A. J., A. T. &amp; Cannon. 2016. <span>“Hydrologic Extremes – an Intercomparison of Multiple Gridded Statistical Downscaling Methods.”</span> <em>Hydrology and Earth System Sciences</em> 20: 1483–1508. <a href="https://doi.org/10.5194/hess-20-1483-2016">https://doi.org/10.5194/hess-20-1483-2016</a>.
+</div>
+<div class="csl-entry">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
 </div>
-<div id="ref-R-bookdown" class="csl-entry">
+<div class="csl-entry">
 ———. 2023. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>This is a footnote.<a href="footnotes-and-citations.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="dask-arrays-and-parallel-calculation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="blocks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sharing-your-book.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -276,7 +318,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-citations.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-references.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>BEYOND ARRAYS</title>
-  <meta name="description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
+  <meta name="description" content="BEYOND ARRAYS" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="BEYOND ARRAYS" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  
+  
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="BEYOND ARRAYS" />
   
-  <meta name="twitter:description" content="This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data." />
+  
   
 
 <meta name="author" content="Guillaume Baggio" />
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="hello-bookdown.html"/>
+<link rel="next" href="introduction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -158,37 +158,20 @@ div.csl-indent {
 <li><a href="./">Beyond Arrays</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Summary</a></li>
-<li class="chapter" data-level="1" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>1</b> Hello bookdown</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>1.1</b> A section</a>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#dowscalling-climate-data"><i class="fa fa-check"></i><b>1.1</b> Dowscalling climate data</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#local-data-means-more-data"><i class="fa fa-check"></i><b>1.2</b> Local data means more data</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html"><i class="fa fa-check"></i><b>2</b> Building a function with <em>xarray</em></a>
 <ul>
-<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+<li class="chapter" data-level="2.1" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#creating-a-function-with-xarray"><i class="fa fa-check"></i><b>2.1</b> Creating a function with Xarray</a></li>
+<li class="chapter" data-level="2.2" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#calculating-the-multi-model-ensemble-mean"><i class="fa fa-check"></i><b>2.2</b> Calculating the multi-model ensemble mean</a></li>
+<li class="chapter" data-level="2.3" data-path="building-a-function-with-xarray.html"><a href="building-a-function-with-xarray.html#calculating-autocorrelation-lag-1"><i class="fa fa-check"></i><b>2.3</b> Calculating autocorrelation lag-1</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>2.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="2.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>2.2</b> Captioned figures and tables</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
-<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
-<li class="chapter" data-level="4.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.2</b> Citations</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
-<li class="chapter" data-level="5.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="5.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>5.3</b> Callout blocks</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>6</b> Sharing your book</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>6.1</b> Publishing</a></li>
-<li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
-<li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="dask-arrays-and-parallel-calculation.html"><a href="dask-arrays-and-parallel-calculation.html"><i class="fa fa-check"></i><b>3</b> <em>Dask</em> arrays and parallel calculation</a></li>
+<li class="chapter" data-level="4" data-path="impacts-of-climate-on-agricultural-conditions.html"><a href="impacts-of-climate-on-agricultural-conditions.html"><i class="fa fa-check"></i><b>4</b> Impacts of climate on agricultural conditions</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -216,14 +199,14 @@ div.csl-indent {
 <p class="author"><em>Guillaume Baggio</em></p>
 <p class="date"><em>2023-05-04</em></p>
 </div>
-<div id="summary" class="section level1 unnumbered hasAnchor">
-<h1>Summary<a href="index.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="preface" class="section level1 unnumbered hasAnchor">
+<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Reliable climate data are crucial for various activities, including agriculture, energy production, transportation, and disaster preparedness. However, obtaining and processing high-definition climate data can pose significant challenges due to the computational time and data complexity involved. High-definition climate data sets are typically large and complex, containing multiple variables, temporal and spatial resolutions, and formats. Processing these data often requires significant computing power and storage resources, which can be expensive and time-consuming. Moreover, the process of cleaning, quality-checking, and preprocessing data to ensure their accuracy and consistency adds to the challenge of using high-definition multi-dimensional climate data.</p>
 <p>One approach to addressing these challenges is through the use of Python packages such as Xarray and Dask. <em>Xarray</em> is an open-source library designed for working with labelled multi-dimensional arrays, such as climate data. It provides an advanced interface for data manipulation and statistical analysis and allows for efficient data indexing, selection, and aggregation with minimal memory usage. <em>Dask</em> is a parallel computing library that enables scalable and efficient computation of large-scale data sets. By using these packages together, researchers and climate experts can better manage and analyze climate data. Essentially, they enable users to handle large datasets that would otherwise exceed the memory capacity of their machines by distributing computations across multiple cores or even multiple machines.</p>
 <p>In addition to the challenges of working with high-definition climate data, the capacity of <em>Xarray</em> to handle multi-dimensional data and integrate it with other scientific computing packages makes it useful for exploring complex relationships between climate, socioeconomic, financial, and demographic data. For instance, by combining climate data with socioeconomic data, researchers can explore how changes in climate patterns, such as increased temperatures or changes in precipitation, could affect vulnerable populations, such as low-income communities. This analysis can provide insights into the potential economic, health, and social impacts of climate change. By integrating climate data with other types of financial data, climate change impact assessments can help policymakers, businesses, and community members to understand the potential financial risks associated with climate change and develop effective strategies for addressing them.</p>
 <p>However, working with emerging Python packages, such as <em>Xarray</em> and <em>Dask</em>, can also present some challenges. These packages often require a certain level of technical expertise and may have a steeper learning curve compared to more traditional data processing tools. Additionally, debugging errors or performance issues can be more difficult with these packages, as they are still in active development and may have limited documentation or support. Incorporating these tools into existing workflows and processes may also require significant adjustments and changes to established practices.</p>
-<p>To contribute to this effort, this document shares some of my learnings from working with high-definition multi-dimensional climate data. As I continue to work with Xarray and Dask, this document will be updated and expanded to provide more insights and practical solutions for working with these packages. <a href="#introduction">Chapter 1</a> introduces some of the challenges experienced by climate experts using high-resolution climate data and discusses the importance of array programming. <a href="#building-a-function-in-xarray">Chapter 2</a> provides a step-by-step guide to building a <em>Xarray</em> function that enables parallel execution of calculations. For now, this document only presents a function that calculates the lag-1 autocorrelation and e-folding time of daily temperature, but more functions will be added in the future.</p>
-<p>And to anyone curious, the title of this document, <em>Beyond Arrays</em>, is a reference to my amusement and intrigue with the potential of <em>Xarray</em> and <em>Dask</em> to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits.</p>
+<p>To contribute to this effort, this document shares some of my learnings from working with high-definition multi-dimensional climate data. As I continue to work with Xarray and Dask, this document will be updated and expanded to provide more insights and practical solutions for working with these packages. <a href="introduction.html#introduction">Chapter 1</a> introduces some of the challenges experienced by climate experts using high-resolution climate data and discusses the importance of array programming. <a href="#building-a-function-in-xarray">Chapter 2</a> provides a step-by-step guide to building a <em>Xarray</em> function that enables parallel execution of calculations with <em>Dask</em>. For now, this document only presents a function that calculates the lag-1 autocorrelation and e-folding time of daily temperature, but more functions will be added in the future.</p>
+<p>Finally, for anyone curious, the title of this document is a reference to my amusement and intrigue with the potential of <em>Xarray</em> and <em>Dask</em> to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits. You can also reach out to me at <a href="mailto:guillaume.baggio@mail.utoronto.ca" class="email">guillaume.baggio@mail.utoronto.ca</a>.</p>
 <!-- # About -->
 <!-- This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 + c^2 = d^2 + f^2 + g^2$. -->
 <!-- This second paragraph is also a test. -->
@@ -259,7 +242,7 @@ div.csl-indent {
         </div>
       </div>
 
-<a href="hello-bookdown.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -313,20 +296,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

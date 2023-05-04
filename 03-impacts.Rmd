@@ -1,0 +1,82 @@
+# Impacts of climate on agricultural conditions
+
+Chapter currently under development.
+
+<!-- # Blocks -->
+
+<!-- ## Equations -->
+
+<!-- Here is an equation. -->
+
+<!-- \begin{equation}  -->
+<!--   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k} -->
+<!--   (\#eq:binom) -->
+<!-- \end{equation}  -->
+
+<!-- You may refer to using `\@ref(eq:binom)`, like see Equation \@ref(eq:binom). -->
+
+
+<!-- ## Theorems and proofs -->
+
+<!-- Labeled theorems can be referenced in text using `\@ref(thm:tri)`, for example, check out this smart theorem \@ref(thm:tri). -->
+
+<!-- ::: {.theorem #tri} -->
+<!-- For a right triangle, if $c$ denotes the *length* of the hypotenuse -->
+<!-- and $a$ and $b$ denote the lengths of the **other** two sides, we have -->
+<!-- $$a^2 + b^2 = c^2$$ -->
+<!-- ::: -->
+
+<!-- Read more here <https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html>. -->
+
+<!-- ## Callout blocks -->
+
+
+<!-- The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html -->
+
+
+<!-- # Footnotes and citations  -->
+
+<!-- ## Footnotes -->
+
+<!-- Footnotes are put inside the square brackets after a caret `^[]`. Like this one ^[This is a footnote.].  -->
+
+<!-- ## Citations -->
+
+<!-- Reference items in your bibliography file(s) using `@key`. -->
+
+<!-- For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib).  -->
+<!-- Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key. -->
+
+
+<!-- The RStudio Visual Markdown Editor can also make it easier to insert citations: <https://rstudio.github.io/visual-markdown-editing/#/citations> -->
+
+<!-- # Sharing your book -->
+
+<!-- ## Publishing -->
+
+<!-- HTML books can be published online, see: https://bookdown.org/yihui/bookdown/publishing.html -->
+
+<!-- ## 404 pages -->
+
+<!-- By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a `_404.Rmd` or `_404.md` file to your project root and use code and/or Markdown syntax. -->
+
+<!-- ## Metadata for sharing -->
+
+<!-- Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the `index.Rmd` YAML. To setup, set the `url` for your book and the path to your `cover-image` file. Your book's `title` and `description` are also used. -->
+
+
+
+<!-- This `gitbook` uses the same social sharing data across all chapters in your book- all links shared will look the same. -->
+
+<!-- Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file.  -->
+
+<!-- Read more about the features of this output format here: -->
+
+<!-- https://pkgs.rstudio.com/bookdown/reference/gitbook.html -->
+
+<!-- Or use: -->
+
+<!-- ```{r eval=FALSE} -->
+<!-- ?bookdown::gitbook -->
+<!-- ``` -->
+

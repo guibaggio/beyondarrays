@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | BEYOND ARRAYS</title>
-  <meta name="description" content="References | BEYOND ARRAYS" />
+  <title>Chapter 1 Introduction | BEYOND ARRAYS</title>
+  <meta name="description" content="Chapter 1 Introduction | BEYOND ARRAYS" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | BEYOND ARRAYS" />
+  <meta property="og:title" content="Chapter 1 Introduction | BEYOND ARRAYS" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | BEYOND ARRAYS" />
+  <meta name="twitter:title" content="Chapter 1 Introduction | BEYOND ARRAYS" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="impacts-of-climate-on-agricultural-conditions.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="building-a-function-with-xarray.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,64 +193,83 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered hasAnchor">
-<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="dowscalling-climate-data" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Dowscalling climate data<a href="introduction.html#dowscalling-climate-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the central issues in the global climate change discussion is the need for regional and local climate data that capture these changes. Such data is required to assess the effects of climate change on human and natural systems, as well as to develop appropriate adaptation and mitigation strategies. Particularly, end-users and decisionmakers have been looking for accurate and reliable climate data to guide response options at the regional and local scales <span class="citation">(<a href="#ref-Overpeck2011" role="doc-biblioref">Overpeck et al., 2011</a>; <a href="#ref-Roberts2018" role="doc-biblioref">Roberts et al., 2018</a>)</span>. This includes high-resolution climate data, reanalysis data, and other monitoring products. For instance, ecosystem and agricultural impact assessments often require high-resolution climate data to assess climate change impacts due to the large spatial variations in natural and agricultural landscapes <span class="citation">(<a href="#ref-Lafferty2021" role="doc-biblioref">Lafferty et al., 2021</a>; <a href="#ref-NavarroRacines2020" role="doc-biblioref">Navarro-Racines et al., 2020</a>)</span>, while complex topographies and human-made infrastructures such as mountains, coastlines, lakes, irrigation, and urban heat islands can substantially influence a region’s climate and its response to climate forcing <span class="citation">(<a href="#ref-Gutowski2020" role="doc-biblioref">Gutowski et al., 2020</a>; <a href="#ref-Smid2017" role="doc-biblioref">Smid &amp; Costa, 2017</a>)</span>.</p>
+<p>To bridge this spatial scale gap, various downscaling techniques have been developed to improve low-resolution data from Global Climate Models (GCMs). For instance, <em>dynamical downscaling</em> makes use of physically based models, such as GCMs run in limited areas, as boundary conditions to reproduce local climate under different climate change scenarios. These Regional Climate Models (RCMs) are usually computationally intensive, and limited data are available for some regions <span class="citation">(<a href="#ref-DiLuca2015" role="doc-biblioref">Luca et al., 2015</a>)</span>. Alternatively, <em>statistical downscaling</em> relies on a mathematical relationship developed between historic observed climate data and the output of GCMs for the same historical period. This relationship is used to obtain the future downscaled climate data. Statistical downscaling can be also combined with different bias correction methods <span class="citation">(<a href="#ref-Can2015" role="doc-biblioref">Cannon et al., 2015</a>; <a href="#ref-Wer2016" role="doc-biblioref">Werner, 2016</a>)</span>.</p>
+<p>Nonetheless, many challenges have been identified in the long chain that ties climate data from GCMs (and the work of climate scientists) to user-friendly high-resolution climate data that can be used by decisionmakers. The UK Climate Change Act, for example, requires the Environment Agency to report the risks caused by climate change and possible actions to address them. However, identifying and providing climate products for decisionmakers remains a challenge <span class="citation">(<a href="#ref-Orr2021" role="doc-biblioref">Orr et al., 2021</a>)</span>. By partnering with decisionmakers from different organizations, climate scientists from the Great Lakes Integrated Sciences and Assessments program also observed unrealistic expectations on the development of climate information products <span class="citation">(<a href="#ref-Briley2015" role="doc-biblioref">Briley et al., 2015</a>)</span>. The challenge of moving from the production of climate information to its use in actual decision-making processes has also been described to as a matter of credibility and legitimacy <span class="citation">(<a href="#ref-Cash2006" role="doc-biblioref">Cash et al., 2006</a>)</span>, and as a challenge of using uncertain science that has also become highly politicized <span class="citation">(<a href="#ref-Meyer2011" role="doc-biblioref">Meyer, 2011</a>)</span>. At the same time, potentially useful climate information often goes unused due to the disparity between what scientists understand as useful information and what end-users recognize as usable in their decision-making processes <span class="citation">(<a href="#ref-Lemos2012" role="doc-biblioref">Lemos et al., 2012</a>)</span>.</p>
+</div>
+<div id="local-data-means-more-data" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Local data means more data<a href="introduction.html#local-data-means-more-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Climate scientists face another challenge. As downscaled climate data services become available, such as the <em>Copernicus Climate Change Service</em>, operated by the European Centre for Medium-Range Weather Forecasts, and <em>ClimateData.ca</em>, a consortium of Canadian governmental and research organizations, the interest towards climate data for specific, local decision-making processes will likely increase <span class="citation">(<a href="#ref-Buontempo2020" role="doc-biblioref">Buontempo et al., 2020</a>; <a href="#ref-Morand2015" role="doc-biblioref">Morand et al., 2015</a>)</span>. From a computational perspective, this challenge translates to an “explosion in data from numerical climate model simulations, which have increased greatly in complexity and size” <span class="citation">(<a href="#ref-Overpeck2011" role="doc-biblioref">Overpeck et al., 2011</a>)</span>.</p>
+<p>To analyse, process, and present climate data, <em>array programming</em> offers a powerful and compact syntax for accessing, manipulating, and operating data. For instance, <em>NumPy</em>, one of the most common array programming libraries in the Python ecosystem, has played a key role in the development of science over the last decades that <span class="citation">(<a href="#ref-Harris2020" role="doc-biblioref">Harris et al., 2020</a>)</span>. Developed in the mid-1990s, this library provides a structure that efficiently stores and accesses data in vectors, matrices, and higher-dimensional arrays and enables a wide variety of scientific computations <span class="citation">(<a href="#ref-vanderWalt2011" role="doc-biblioref">Walt et al., 2011</a>)</span>. It also operates on in-memory arrays using the central processing unit (CPU), which means that the library can run on simple embedded devices as well as on the world’s largest computers. In this context, the Python ecosystem has proved extremely effective as a platform for climate scientists, and several packages have been developed over time to address specific needs in climate science, such as <em>ClimLab</em>, <em>CliMetLab</em>, <em>PyGeode</em>, and <em>MetPy</em>.</p>
+<p>However, downscaled climate data, as any large dataset, can easily exceed the memory capacity of a single machine. This issue has been accompanied by the emergence of new approaches to handle large amounts of data, including distributed data and parallel execution of graphics processing units (GPUs) and tensor processing units (TPUs). Whereas NumPy’s inability to utilize such approaches due to its in-memory data functioning led to a “gap between available modern hardware architectures and the tools necessary to leverage their computational power” <span class="citation">(<a href="#ref-Harris2020" role="doc-biblioref">Harris et al., 2020</a>)</span>, the scientific community’s efforts to fill this gap contributed to a proliferation of new array implementations, including <em>Pandas</em> in 2008, <em>Xarray</em> in 2014, and <em>Dask</em> in 2018.</p>
+<!-- # Hello bookdown  -->
+<!-- All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file. -->
+<!-- ## A section -->
+<!-- All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter. -->
+<!-- ### An unnumbered section {-} -->
+<!-- Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section. -->
 
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
+<div id="ref-Briley2015" class="csl-entry">
 Briley, L., Brown, D., &amp; Kalafatis, S. E. (2015). Overcoming barriers during the co-production of climate information for decision-making. <em>Climate Risk Management</em>, <em>9</em>, 41–49. <a href="https://doi.org/10.1016/j.crm.2015.04.004">https://doi.org/10.1016/j.crm.2015.04.004</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Buontempo2020" class="csl-entry">
 Buontempo, C., Hutjes, R., Beavis, P., Berckmans, J., Cagnazzo, C., Vamborg, F., Thépaut, J.-N., Bergeron, C., Almond, S., Amici, A., Ramasamy, S., &amp; Dee, D. (2020). Fostering the development of climate services through copernicus climate change service (C3S) for agriculture applications. <em>Weather and Climate Extremes</em>, <em>27</em>, 100226. <a href="https://doi.org/10.1016/j.wace.2019.100226">https://doi.org/10.1016/j.wace.2019.100226</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Can2015" class="csl-entry">
 Cannon, A. J., Sobie, S. R., &amp; Murdock, T. Q. (2015). Bias correction of GCM precipitation by quantile mapping: How well do methods preserve changes in quantiles and extremes? <em>Journal of Climate</em>, <em>28</em>(17), 6938–6959. <a href="https://doi.org/10.1175/JCLI-D-14-00754.1">https://doi.org/10.1175/JCLI-D-14-00754.1</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Cash2006" class="csl-entry">
 Cash, D. W., Borck, J. C., &amp; Patt, A. G. (2006). Countering the loading-dock approach to linking science and decision making. <em>Science, Technology, Human Values</em>, <em>31</em>(4), 465–494. <a href="https://doi.org/10.1177/0162243906287547">https://doi.org/10.1177/0162243906287547</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Gutowski2020" class="csl-entry">
 Gutowski, W. J., Ullrich, P. A., Hall, A., Leung, L. R., O’Brien, T. A., Patricola, C. M., Arritt, R. W., Bukovsky, M. S., Calvin, K. V., Feng, Z., Jones, A. D., Kooperman, G. J., Monier, E., Pritchard, M. S., Pryor, S. C., Qian, Y., Rhoades, A. M., Roberts, A. F., Sakaguchi, K., … Zarzycki, C. (2020). The ongoing need for high-resolution regional climate models: Process understanding and stakeholder information. <em>Bulletin of the American Meteorological Society</em>, <em>101</em>(5), E664–E683. <a href="https://doi.org/10.1175/bams-d-19-0113.1">https://doi.org/10.1175/bams-d-19-0113.1</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Harris2020" class="csl-entry">
 Harris, C. R., Millman, K. J., Walt, S. J. van der, Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N. J., Kern, R., Picus, M., Hoyer, S., Kerkwijk, M. H. van, Brett, M., Haldane, A., Rı́o, J. F. del, Wiebe, M., Peterson, P., … Oliphant, T. E. (2020). Array programming with <span>NumPy</span>. <em>Nature</em>, <em>585</em>(7825), 357–362. <a href="https://doi.org/10.1038/s41586-020-2649-2">https://doi.org/10.1038/s41586-020-2649-2</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Lafferty2021" class="csl-entry">
 Lafferty, D. C., Sriver, R. L., Haqiqi, I., Hertel, T. W., Keller, K., &amp; Nicholas, R. E. (2021). Statistically bias-corrected and downscaled climate models underestimate the adverse effects of extreme heat on u.s. Maize yields. <em>Communications Earth Environment</em>, <em>2</em>(1). <a href="https://doi.org/10.1038/s43247-021-00266-9">https://doi.org/10.1038/s43247-021-00266-9</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Lemos2012" class="csl-entry">
 Lemos, M. C., Kirchhoff, C. J., &amp; Ramprasad, V. (2012). Narrowing the climate information usability gap. <em>Nature Climate Change</em>, <em>2</em>(11), 789–794. <a href="https://doi.org/10.1038/nclimate1614">https://doi.org/10.1038/nclimate1614</a>
 </div>
-<div class="csl-entry">
+<div id="ref-DiLuca2015" class="csl-entry">
 Luca, A. D., Elı́a, R. de, &amp; Laprise, R. (2015). Challenges in the quest for added value of regional climate dynamical downscaling. <em>Current Climate Change Reports</em>, <em>1</em>(1), 10–21. <a href="https://doi.org/10.1007/s40641-015-0003-9">https://doi.org/10.1007/s40641-015-0003-9</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Meyer2011" class="csl-entry">
 Meyer, R. (2011). The public values failures of climate science in the <span>US</span>. <em>Minerva</em>, <em>49</em>(1), 47–70. <a href="https://doi.org/10.1007/s11024-011-9164-4">https://doi.org/10.1007/s11024-011-9164-4</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Morand2015" class="csl-entry">
 Morand, C. A., Douglas, A., &amp; Richard, J. (2015). <em>A survey of climate information needs among users in ontario, canada</em>. <a href="http://www.climateontario.ca/doc/Survey/ClimateInformationNeedsSurveyResults-OCCIAR.pdf">http://www.climateontario.ca/doc/Survey/ClimateInformationNeedsSurveyResults-OCCIAR.pdf</a>
 </div>
-<div class="csl-entry">
+<div id="ref-NavarroRacines2020" class="csl-entry">
 Navarro-Racines, C., Tarapues, J., Thornton, P., Jarvis, A., &amp; Ramirez-Villegas, J. (2020). High-resolution and bias-corrected <span>CMIP</span>5 projections for climate change impact assessments. <em>Scientific Data</em>, <em>7</em>(1). <a href="https://doi.org/10.1038/s41597-019-0343-8">https://doi.org/10.1038/s41597-019-0343-8</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Orr2021" class="csl-entry">
 Orr, H. G., Ekström, M., Charlton, M. B., Peat, K. L., &amp; Fowler, H. J. (2021). Using high-resolution climate change information in water management: A decision-makers<span></span> perspective. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, <em>379</em>(2195), 20200219. <a href="https://doi.org/10.1098/rsta.2020.0219">https://doi.org/10.1098/rsta.2020.0219</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Overpeck2011" class="csl-entry">
 Overpeck, J. T., Meehl, G. A., Bony, S., &amp; Easterling, D. R. (2011). Climate data challenges in the 21st century. <em>Science</em>, <em>331</em>(6018), 700–702. <a href="https://doi.org/10.1126/science.1197869">https://doi.org/10.1126/science.1197869</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Roberts2018" class="csl-entry">
 Roberts, M. J., Vidale, P. L., Senior, C., Hewitt, H. T., Bates, C., Berthou, S., Chang, P., Christensen, H. M., Danilov, S., Demory, M.-E., Griffies, S. M., Haarsma, R., Jung, T., Martin, G., Minobe, S., Ringler, T., Satoh, M., Schiemann, R., Scoccimarro, E., … Wehner, M. F. (2018). The benefits of global high resolution for climate simulation: Process understanding and the enabling of stakeholder decisions at the regional scale. <em>Bulletin of the American Meteorological Society</em>, <em>99</em>(11), 2341–2359. <a href="https://doi.org/10.1175/bams-d-15-00320.1">https://doi.org/10.1175/bams-d-15-00320.1</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Smid2017" class="csl-entry">
 Smid, M., &amp; Costa, A. C. (2017). Climate projections and downscaling techniques: A discussion for impact studies in urban systems. <em>International Journal of Urban Sciences</em>, <em>22</em>(3), 277–307. <a href="https://doi.org/10.1080/12265934.2017.1409132">https://doi.org/10.1080/12265934.2017.1409132</a>
 </div>
-<div class="csl-entry">
+<div id="ref-vanderWalt2011" class="csl-entry">
 Walt, S. van der, Colbert, S. C., &amp; Varoquaux, G. (2011). The <span>NumPy</span> array: A structure for efficient numerical computation. <em>Computing in Science Engineering</em>, <em>13</em>(2), 22–30. <a href="https://doi.org/10.1109/mcse.2011.37">https://doi.org/10.1109/mcse.2011.37</a>
 </div>
-<div class="csl-entry">
+<div id="ref-Wer2016" class="csl-entry">
 Werner, A. J., A. T. &amp; Cannon. (2016). Hydrologic extremes – an intercomparison of multiple gridded statistical downscaling methods. <em>Hydrology and Earth System Sciences</em>, <em>20</em>, 1483–1508. <a href="https://doi.org/10.5194/hess-20-1483-2016">https://doi.org/10.5194/hess-20-1483-2016</a>
-</div>
 </div>
 </div>
             </section>
@@ -258,8 +277,8 @@ Werner, A. J., A. T. &amp; Cannon. (2016). Hydrologic extremes – an intercompa
           </div>
         </div>
       </div>
-<a href="impacts-of-climate-on-agricultural-conditions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="building-a-function-with-xarray.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -290,7 +309,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/references.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -1,11 +1,36 @@
-# Hello bookdown 
+# Introduction
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+## Dowscalling climate data
 
-## A section
+One of the central issues in the global climate change discussion is the need for regional and local climate data that capture these changes. Such data is required to assess the effects of climate change on human and natural systems, as well as to develop appropriate adaptation and mitigation strategies. Particularly, end-users and decisionmakers have been looking for accurate and reliable climate data to guide response options at the regional and local scales [@Overpeck2011; @Roberts2018]. This includes high-resolution climate data, reanalysis data, and other monitoring products. For instance, ecosystem and agricultural impact assessments often require high-resolution climate data to assess climate change impacts due to the large spatial variations in natural and agricultural landscapes [@NavarroRacines2020; @Lafferty2021], while complex topographies and human-made infrastructures such as mountains, coastlines, lakes, irrigation, and urban heat islands can substantially influence a region’s climate and its response to climate forcing [@Smid2017; @Gutowski2020].
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+To bridge this spatial scale gap, various downscaling techniques have been developed to improve low-resolution data from Global Climate Models (GCMs). For instance, _dynamical downscaling_ makes use of physically based models, such as GCMs run in limited areas, as boundary conditions to reproduce local climate under different climate change scenarios. These Regional Climate Models (RCMs) are usually computationally intensive, and limited data are available for some regions [@DiLuca2015]. Alternatively, _statistical downscaling_ relies on a mathematical relationship developed between historic observed climate data and the output of GCMs for the same historical period. This relationship is used to obtain the future downscaled climate data. Statistical downscaling can be also combined with different bias correction methods [@Can2015; @Wer2016]. 
 
-### An unnumbered section {-}
+Nonetheless, many challenges have been identified in the long chain that ties climate data from GCMs (and the work of climate scientists) to user-friendly high-resolution climate data that can be used by decisionmakers. The UK Climate Change Act, for example, requires the Environment Agency to report the risks caused by climate change and possible actions to address them. However, identifying and providing climate products for decisionmakers remains a challenge [@Orr2021]. By partnering with decisionmakers from different organizations, climate scientists from the Great Lakes Integrated Sciences and Assessments program also observed unrealistic expectations on the development of climate information products [@Briley2015]. The challenge of moving from the production of climate information to its use in actual decision-making processes has also been described to as a matter of credibility and legitimacy [@Cash2006], and as a challenge of using uncertain science that has also become highly politicized [@Meyer2011]. At the same time, potentially useful climate information often goes unused due to the disparity between what scientists understand as useful information and what end-users recognize as usable in their decision-making processes [@Lemos2012].
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+## Local data means more data
+
+Climate scientists face another challenge. As downscaled climate data services become available, such as the _Copernicus Climate Change Service_, operated by the European Centre for Medium-Range Weather Forecasts, and _ClimateData.ca_, a consortium of Canadian governmental and research organizations, the interest towards climate data for specific, local decision-making processes will likely increase [@Morand2015; @Buontempo2020]. From a computational perspective, this challenge translates to an “explosion in data from numerical climate model simulations, which have increased greatly in complexity and size” [@Overpeck2011].
+
+To analyse, process, and present climate data, _array programming_ offers a powerful and compact syntax for accessing, manipulating, and operating data. For instance, _NumPy_, one of the most common array programming libraries in the Python ecosystem, has played a key role in the development of science over the last decades that  [@Harris2020]. Developed in the mid-1990s, this library  provides a structure that efficiently stores and accesses data in vectors, matrices, and higher-dimensional arrays and enables a wide variety of scientific computations [@vanderWalt2011]. It also operates on in-memory arrays using the central processing unit (CPU), which means that the library can run on simple embedded devices as well as on the world’s largest computers. In this context, the Python ecosystem has proved extremely effective as a platform for climate scientists, and several packages have been developed over time to address specific needs in climate science, such as _ClimLab_, _CliMetLab_, _PyGeode_, and _MetPy_.
+
+However, downscaled climate data, as any large dataset, can easily exceed the memory capacity of a single machine. This issue has been accompanied by the emergence of new approaches to handle large amounts of data, including distributed data and parallel execution of graphics processing units (GPUs) and tensor processing units (TPUs). Whereas NumPy's inability to utilize such approaches due to its in-memory data functioning led to a "gap between available modern hardware architectures and the tools necessary to leverage their computational power” [@Harris2020], the scientific community’s efforts to fill this gap contributed to a proliferation of new array implementations, including _Pandas_ in 2008, _Xarray_ in 2014, and _Dask_ in 2018.
+
+```{r include=FALSE}
+ # automatically create a bib database for R packages
+ knitr::write_bib(c(
+   .packages(), 'bookdown', 'knitr', 'rmarkdown'
+ ), 'packages.bib')
+```
+
+<!-- # Hello bookdown  -->
+
+<!-- All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file. -->
+
+<!-- ## A section -->
+
+<!-- All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter. -->
+
+<!-- ### An unnumbered section {-} -->
+
+<!-- Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section. -->
