@@ -1,5 +1,6 @@
 --- 
-title: "Beyond Arrays"
+title: "BEYOND ARRAYS"
+subtitle: 'Finding solutions to work with high-definition multi-dimensional climate data'
 author: "Guillaume Baggio"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,55 +9,67 @@ bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  This document contains some reflections on the challenges of using of multi-dimensional downscalled climate data.
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# About
+# Summary {-}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 + c^2 = d^2 + f^2 + g^2$.
+Reliable climate data are crucial for various activities, including agriculture, energy production, transportation, and disaster preparedness. However, obtaining and processing high-definition climate data can pose significant challenges due to the computational time and data complexity involved. High-definition climate data sets are typically large and complex, containing multiple variables, temporal and spatial resolutions, and formats. Processing these data often requires significant computing power and storage resources, which can be expensive and time-consuming. Moreover, the process of cleaning, quality-checking, and preprocessing data to ensure their accuracy and consistency adds to the challenge of using high-definition multi-dimensional climate data.
 
-This second paragraph is also a test.
+One approach to addressing these challenges is through the use of Python packages such as Xarray and Dask. _Xarray_ is an open-source library designed for working with labelled multi-dimensional arrays, such as climate data. It provides an advanced interface for data manipulation and statistical analysis and allows for efficient data indexing, selection, and aggregation with minimal memory usage. _Dask_ is a parallel computing library that enables scalable and efficient computation of large-scale data sets. By using these packages together, researchers and climate experts can better manage and analyze climate data. Essentially, they enable users to handle large datasets that would otherwise exceed the memory capacity of their machines by distributing computations across multiple cores or even multiple machines.
 
-## Usage 
+In addition to the challenges of working with high-definition climate data, the capacity of _Xarray_ to handle multi-dimensional data and integrate it with other scientific computing packages makes it useful for exploring complex relationships between climate, socioeconomic, financial, and demographic data. For instance, by combining climate data with socioeconomic data, researchers can explore how changes in climate patterns, such as increased temperatures or changes in precipitation, could affect vulnerable populations, such as low-income communities. This analysis can provide insights into the potential economic, health, and social impacts of climate change. By integrating climate data with other types of financial data, climate change impact assessments can help policymakers, businesses, and community members to understand the potential financial risks associated with climate change and develop effective strategies for addressing them.
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+However, working with emerging Python packages, such as _Xarray_ and _Dask_, can also present some challenges. These packages often require a certain level of technical expertise and may have a steeper learning curve compared to more traditional data processing tools. Additionally, debugging errors or performance issues can be more difficult with these packages, as they are still in active development and may have limited documentation or support. Incorporating these tools into existing workflows and processes may also require significant adjustments and changes to established practices.
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+To contribute to this effort, this document shares some of my learnings from working with high-definition multi-dimensional climate data. As I continue to work with Xarray and Dask, this document will be updated and expanded to provide more insights and practical solutions for working with these packages. [Chapter 1](#introduction) introduces some of the challenges experienced by climate experts using high-resolution climate data and discusses the importance of array programming. [Chapter 2](#building-a-function-in-xarray) provides a step-by-step guide to building a _Xarray_ function that enables parallel execution of calculations. For now, this document only presents a function that calculates the lag-1 autocorrelation and e-folding time of daily temperature, but more functions will be added in the future.
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+And to anyone curious, the title of this document, _Beyond Arrays_, is a reference to my amusement and intrigue with the potential of _Xarray_ and _Dask_ to go beyond traditional array programming. With the right technical skills and a willingness to try new approaches, my goal is to contribute to these powerful climate analysis toolkits.
 
-## Render book
+<!-- # About -->
 
-You can render the HTML version of this example book without changing anything:
+<!-- This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 + c^2 = d^2 + f^2 + g^2$. -->
 
-1. Find the **Build** pane in the RStudio IDE, and
+<!-- This second paragraph is also a test. -->
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+<!-- ## Usage  -->
 
-Or build the book from the R console:
+<!-- Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading. -->
 
-```{r, eval=FALSE}
-bookdown::render_book()
-```
+<!-- Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`. -->
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+<!-- The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book. -->
 
-## Preview book
+<!-- ## Render book -->
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+<!-- You can render the HTML version of this example book without changing anything: -->
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
+<!-- 1. Find the **Build** pane in the RStudio IDE, and -->
+
+<!-- 1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files. -->
+
+<!-- Or build the book from the R console: -->
+
+<!-- ```{r, eval=FALSE} -->
+<!-- bookdown::render_book() -->
+<!-- ``` -->
+
+<!-- To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>. -->
+
+<!-- ## Preview book -->
+
+<!-- As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console: -->
+
+<!-- ```{r eval=FALSE} -->
+<!-- bookdown::serve_book() -->
+<!-- ``` -->
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+<!-- ```{r include=FALSE} -->
+<!-- # automatically create a bib database for R packages -->
+<!-- knitr::write_bib(c( -->
+<!--   .packages(), 'bookdown', 'knitr', 'rmarkdown' -->
+<!-- ), 'packages.bib') -->
+<!-- ``` -->
