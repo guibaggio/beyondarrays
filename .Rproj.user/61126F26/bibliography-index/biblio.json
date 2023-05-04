@@ -1,6 +1,922 @@
 {
     "sources": [
         {
+            "URL": "http://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "DOI": "10.5194/hess-20-1483-2016",
+            "URL": "https://hess.copernicus.org/articles/20/1483/2016/",
+            "author": [
+                {
+                    "family": "Werner",
+                    "given": "A. J.",
+                    "suffix": "A. T. & Cannon"
+                }
+            ],
+            "container-title": "Hydrology and Earth System Sciences",
+            "id": "Wer2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "1483-1508",
+            "title": "Hydrologic extremes – an intercomparison of multiple gridded statistical downscaling methods",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "DOI": "10.1175/JCLI-D-14-00754.1",
+            "URL": "https://journals.ametsoc.org/view/journals/clim/28/17/jcli-d-14-00754.1.xml",
+            "author": [
+                {
+                    "family": "Cannon",
+                    "given": "Alex J."
+                },
+                {
+                    "family": "Sobie",
+                    "given": "Stephen R."
+                },
+                {
+                    "family": "Murdock",
+                    "given": "Trevor Q."
+                }
+            ],
+            "container-title": "Journal of Climate",
+            "id": "Can2015",
+            "issue": "17",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "6938 - 6959",
+            "publisher": "American Meteorological Society",
+            "publisher-place": "Boston MA, USA",
+            "title": "Bias correction of GCM precipitation by quantile mapping: How well do methods preserve changes in quantiles and extremes?",
+            "title-short": "Bias correction of GCM precipitation by quantile mapping",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "DOI": "10.1175/bams-d-19-0113.1",
+            "URL": "https://doi.org/10.1175/bams-d-19-0113.1",
+            "author": [
+                {
+                    "family": "Gutowski",
+                    "given": "W. J."
+                },
+                {
+                    "family": "Ullrich",
+                    "given": "P. A."
+                },
+                {
+                    "family": "Hall",
+                    "given": "A."
+                },
+                {
+                    "family": "Leung",
+                    "given": "L. R."
+                },
+                {
+                    "family": "O’Brien",
+                    "given": "T. A."
+                },
+                {
+                    "family": "Patricola",
+                    "given": "C. M."
+                },
+                {
+                    "family": "Arritt",
+                    "given": "R. W."
+                },
+                {
+                    "family": "Bukovsky",
+                    "given": "M. S."
+                },
+                {
+                    "family": "Calvin",
+                    "given": "K. V."
+                },
+                {
+                    "family": "Feng",
+                    "given": "Z."
+                },
+                {
+                    "family": "Jones",
+                    "given": "A. D."
+                },
+                {
+                    "family": "Kooperman",
+                    "given": "G. J."
+                },
+                {
+                    "family": "Monier",
+                    "given": "E."
+                },
+                {
+                    "family": "Pritchard",
+                    "given": "M. S."
+                },
+                {
+                    "family": "Pryor",
+                    "given": "S. C."
+                },
+                {
+                    "family": "Qian",
+                    "given": "Y."
+                },
+                {
+                    "family": "Rhoades",
+                    "given": "A. M."
+                },
+                {
+                    "family": "Roberts",
+                    "given": "A. F."
+                },
+                {
+                    "family": "Sakaguchi",
+                    "given": "K."
+                },
+                {
+                    "family": "Urban",
+                    "given": "N."
+                },
+                {
+                    "family": "Zarzycki",
+                    "given": "C."
+                }
+            ],
+            "container-title": "Bulletin of the American Meteorological Society",
+            "id": "Gutowski2020",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        5
+                    ]
+                ]
+            },
+            "page": "E664-E683",
+            "publisher": "American Meteorological Society",
+            "title": "The ongoing need for high-resolution regional climate models: Process understanding and stakeholder information",
+            "title-short": "The ongoing need for high-resolution regional climate models",
+            "type": "article-journal",
+            "volume": "101"
+        },
+        {
+            "DOI": "10.1038/s41597-019-0343-8",
+            "URL": "https://doi.org/10.1038/s41597-019-0343-8",
+            "author": [
+                {
+                    "family": "Navarro-Racines",
+                    "given": "Carlos"
+                },
+                {
+                    "family": "Tarapues",
+                    "given": "Jaime"
+                },
+                {
+                    "family": "Thornton",
+                    "given": "Philip"
+                },
+                {
+                    "family": "Jarvis",
+                    "given": "Andy"
+                },
+                {
+                    "family": "Ramirez-Villegas",
+                    "given": "Julian"
+                }
+            ],
+            "container-title": "Scientific Data",
+            "id": "NavarroRacines2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        1
+                    ]
+                ]
+            },
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "High-resolution and bias-corrected CMIP5 projections for climate change impact assessments",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.1007/s40641-015-0003-9",
+            "URL": "https://doi.org/10.1007/s40641-015-0003-9",
+            "author": [
+                {
+                    "family": "Luca",
+                    "given": "Alejandro Di"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Elı́a",
+                    "given": "Ramón"
+                },
+                {
+                    "family": "Laprise",
+                    "given": "René"
+                }
+            ],
+            "container-title": "Current Climate Change Reports",
+            "id": "DiLuca2015",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        2
+                    ]
+                ]
+            },
+            "page": "10-21",
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "Challenges in the quest for added value of regional climate dynamical downscaling",
+            "type": "article-journal",
+            "volume": "1"
+        },
+        {
+            "DOI": "10.1038/s43247-021-00266-9",
+            "URL": "https://doi.org/10.1038/s43247-021-00266-9",
+            "author": [
+                {
+                    "family": "Lafferty",
+                    "given": "David C."
+                },
+                {
+                    "family": "Sriver",
+                    "given": "Ryan L."
+                },
+                {
+                    "family": "Haqiqi",
+                    "given": "Iman"
+                },
+                {
+                    "family": "Hertel",
+                    "given": "Thomas W."
+                },
+                {
+                    "family": "Keller",
+                    "given": "Klaus"
+                },
+                {
+                    "family": "Nicholas",
+                    "given": "Robert E."
+                }
+            ],
+            "container-title": "Communications Earth Environment",
+            "id": "Lafferty2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        9
+                    ]
+                ]
+            },
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "Statistically bias-corrected and downscaled climate models underestimate the adverse effects of extreme heat on u.s. Maize yields",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.1098/rsta.2020.0219",
+            "URL": "https://doi.org/10.1098/rsta.2020.0219",
+            "author": [
+                {
+                    "family": "Orr",
+                    "given": "H. G."
+                },
+                {
+                    "family": "Ekström",
+                    "given": "M."
+                },
+                {
+                    "family": "Charlton",
+                    "given": "M. B."
+                },
+                {
+                    "family": "Peat",
+                    "given": "K. L."
+                },
+                {
+                    "family": "Fowler",
+                    "given": "H. J."
+                }
+            ],
+            "container-title": "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences",
+            "id": "Orr2021",
+            "issue": "2195",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        3
+                    ]
+                ]
+            },
+            "page": "20200219",
+            "publisher": "The Royal Society",
+            "title": "Using high-resolution climate change information in water management: A decision-makers perspective",
+            "title-short": "Using high-resolution climate change information in water management",
+            "type": "article-journal",
+            "volume": "379"
+        },
+        {
+            "DOI": "10.1016/j.crm.2015.04.004",
+            "URL": "https://doi.org/10.1016/j.crm.2015.04.004",
+            "author": [
+                {
+                    "family": "Briley",
+                    "given": "Laura"
+                },
+                {
+                    "family": "Brown",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Kalafatis",
+                    "given": "Scott E."
+                }
+            ],
+            "container-title": "Climate Risk Management",
+            "id": "Briley2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "41-49",
+            "publisher": "Elsevier BV",
+            "title": "Overcoming barriers during the co-production of climate information for decision-making",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "DOI": "10.1177/0162243906287547",
+            "URL": "https://doi.org/10.1177/0162243906287547",
+            "author": [
+                {
+                    "family": "Cash",
+                    "given": "David W."
+                },
+                {
+                    "family": "Borck",
+                    "given": "Jonathan C."
+                },
+                {
+                    "family": "Patt",
+                    "given": "Anthony G."
+                }
+            ],
+            "container-title": "Science, Technology, Human Values",
+            "id": "Cash2006",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006,
+                        7
+                    ]
+                ]
+            },
+            "page": "465-494",
+            "publisher": "SAGE Publications",
+            "title": "Countering the loading-dock approach to linking science and decision making",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
+            "DOI": "10.1007/s11024-011-9164-4",
+            "URL": "https://doi.org/10.1007/s11024-011-9164-4",
+            "author": [
+                {
+                    "family": "Meyer",
+                    "given": "Ryan"
+                }
+            ],
+            "container-title": "Minerva",
+            "id": "Meyer2011",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011,
+                        3
+                    ]
+                ]
+            },
+            "page": "47-70",
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "The public values failures of climate science in the US",
+            "type": "article-journal",
+            "volume": "49"
+        },
+        {
+            "DOI": "10.1038/nclimate1614",
+            "URL": "https://doi.org/10.1038/nclimate1614",
+            "author": [
+                {
+                    "family": "Lemos",
+                    "given": "Maria Carmen"
+                },
+                {
+                    "family": "Kirchhoff",
+                    "given": "Christine J."
+                },
+                {
+                    "family": "Ramprasad",
+                    "given": "Vijay"
+                }
+            ],
+            "container-title": "Nature Climate Change",
+            "id": "Lemos2012",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        10
+                    ]
+                ]
+            },
+            "page": "789-794",
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "Narrowing the climate information usability gap",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.1080/12265934.2017.1409132",
+            "URL": "https://doi.org/10.1080/12265934.2017.1409132",
+            "author": [
+                {
+                    "family": "Smid",
+                    "given": "Marek"
+                },
+                {
+                    "family": "Costa",
+                    "given": "Ana Cristina"
+                }
+            ],
+            "container-title": "International Journal of Urban Sciences",
+            "id": "Smid2017",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        11
+                    ]
+                ]
+            },
+            "page": "277-307",
+            "publisher": "Informa UK Limited",
+            "title": "Climate projections and downscaling techniques: A discussion for impact studies in urban systems",
+            "title-short": "Climate projections and downscaling techniques",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "DOI": "10.1175/bams-d-15-00320.1",
+            "URL": "https://doi.org/10.1175/bams-d-15-00320.1",
+            "author": [
+                {
+                    "family": "Roberts",
+                    "given": "M. J."
+                },
+                {
+                    "family": "Vidale",
+                    "given": "P. L."
+                },
+                {
+                    "family": "Senior",
+                    "given": "C."
+                },
+                {
+                    "family": "Hewitt",
+                    "given": "H. T."
+                },
+                {
+                    "family": "Bates",
+                    "given": "C."
+                },
+                {
+                    "family": "Berthou",
+                    "given": "S."
+                },
+                {
+                    "family": "Chang",
+                    "given": "P."
+                },
+                {
+                    "family": "Christensen",
+                    "given": "H. M."
+                },
+                {
+                    "family": "Danilov",
+                    "given": "S."
+                },
+                {
+                    "family": "Demory",
+                    "given": "M.-E."
+                },
+                {
+                    "family": "Griffies",
+                    "given": "S. M."
+                },
+                {
+                    "family": "Haarsma",
+                    "given": "R."
+                },
+                {
+                    "family": "Jung",
+                    "given": "T."
+                },
+                {
+                    "family": "Martin",
+                    "given": "G."
+                },
+                {
+                    "family": "Minobe",
+                    "given": "S."
+                },
+                {
+                    "family": "Ringler",
+                    "given": "T."
+                },
+                {
+                    "family": "Satoh",
+                    "given": "M."
+                },
+                {
+                    "family": "Schiemann",
+                    "given": "R."
+                },
+                {
+                    "family": "Scoccimarro",
+                    "given": "E."
+                },
+                {
+                    "family": "Stephens",
+                    "given": "G."
+                },
+                {
+                    "family": "Wehner",
+                    "given": "M. F."
+                }
+            ],
+            "container-title": "Bulletin of the American Meteorological Society",
+            "id": "Roberts2018",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        11
+                    ]
+                ]
+            },
+            "page": "2341-2359",
+            "publisher": "American Meteorological Society",
+            "title": "The benefits of global high resolution for climate simulation: Process understanding and the enabling of stakeholder decisions at the regional scale",
+            "title-short": "The benefits of global high resolution for climate simulation",
+            "type": "article-journal",
+            "volume": "99"
+        },
+        {
+            "DOI": "10.1126/science.1197869",
+            "URL": "https://doi.org/10.1126/science.1197869",
+            "author": [
+                {
+                    "family": "Overpeck",
+                    "given": "Jonathan T."
+                },
+                {
+                    "family": "Meehl",
+                    "given": "Gerald A."
+                },
+                {
+                    "family": "Bony",
+                    "given": "Sandrine"
+                },
+                {
+                    "family": "Easterling",
+                    "given": "David R."
+                }
+            ],
+            "container-title": "Science",
+            "id": "Overpeck2011",
+            "issue": "6018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011,
+                        2
+                    ]
+                ]
+            },
+            "page": "700-702",
+            "publisher": "American Association for the Advancement of Science (AAAS)",
+            "title": "Climate data challenges in the 21st century",
+            "type": "article-journal",
+            "volume": "331"
+        },
+        {
+            "DOI": "10.1016/j.wace.2019.100226",
+            "URL": "https://doi.org/10.1016/j.wace.2019.100226",
+            "author": [
+                {
+                    "family": "Buontempo",
+                    "given": "Carlo"
+                },
+                {
+                    "family": "Hutjes",
+                    "given": "Ronald"
+                },
+                {
+                    "family": "Beavis",
+                    "given": "Philip"
+                },
+                {
+                    "family": "Berckmans",
+                    "given": "Julie"
+                },
+                {
+                    "family": "Cagnazzo",
+                    "given": "Chiara"
+                },
+                {
+                    "family": "Vamborg",
+                    "given": "Freja"
+                },
+                {
+                    "family": "Thépaut",
+                    "given": "Jean-Noël"
+                },
+                {
+                    "family": "Bergeron",
+                    "given": "Cedric"
+                },
+                {
+                    "family": "Almond",
+                    "given": "Samuel"
+                },
+                {
+                    "family": "Amici",
+                    "given": "Alessandro"
+                },
+                {
+                    "family": "Ramasamy",
+                    "given": "Selvaraju"
+                },
+                {
+                    "family": "Dee",
+                    "given": "Dick"
+                }
+            ],
+            "container-title": "Weather and Climate Extremes",
+            "id": "Buontempo2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        3
+                    ]
+                ]
+            },
+            "page": "100226",
+            "publisher": "Elsevier BV",
+            "title": "Fostering the development of climate services through copernicus climate change service (C3S) for agriculture applications",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "URL": "http://www.climateontario.ca/doc/Survey/ClimateInformationNeedsSurveyResults-OCCIAR.pdf",
+            "author": [
+                {
+                    "family": "Morand",
+                    "suffix": "C. A."
+                },
+                {
+                    "family": "Douglas",
+                    "suffix": "A."
+                },
+                {
+                    "family": "Richard",
+                    "given": "J."
+                }
+            ],
+            "id": "Morand2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "title": "A survey of climate information needs among users in ontario, canada",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1038/s41586-020-2649-2",
+            "URL": "https://doi.org/10.1038/s41586-020-2649-2",
+            "author": [
+                {
+                    "family": "Harris",
+                    "given": "Charles R."
+                },
+                {
+                    "family": "Millman",
+                    "given": "K. Jarrod"
+                },
+                {
+                    "dropping-particle": "van der",
+                    "family": "Walt",
+                    "given": "Stéfan J."
+                },
+                {
+                    "family": "Gommers",
+                    "given": "Ralf"
+                },
+                {
+                    "family": "Virtanen",
+                    "given": "Pauli"
+                },
+                {
+                    "family": "Cournapeau",
+                    "given": "David"
+                },
+                {
+                    "family": "Wieser",
+                    "given": "Eric"
+                },
+                {
+                    "family": "Taylor",
+                    "given": "Julian"
+                },
+                {
+                    "family": "Berg",
+                    "given": "Sebastian"
+                },
+                {
+                    "family": "Smith",
+                    "given": "Nathaniel J."
+                },
+                {
+                    "family": "Kern",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Picus",
+                    "given": "Matti"
+                },
+                {
+                    "family": "Hoyer",
+                    "given": "Stephan"
+                },
+                {
+                    "dropping-particle": "van",
+                    "family": "Kerkwijk",
+                    "given": "Marten H."
+                },
+                {
+                    "family": "Brett",
+                    "given": "Matthew"
+                },
+                {
+                    "family": "Haldane",
+                    "given": "Allan"
+                },
+                {
+                    "dropping-particle": "del",
+                    "family": "Rı́o",
+                    "given": "Jaime Fernández"
+                },
+                {
+                    "family": "Wiebe",
+                    "given": "Mark"
+                },
+                {
+                    "family": "Peterson",
+                    "given": "Pearu"
+                },
+                {
+                    "family": "Gérard-Marchant",
+                    "given": "Pierre"
+                },
+                {
+                    "family": "Sheppard",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Reddy",
+                    "given": "Tyler"
+                },
+                {
+                    "family": "Weckesser",
+                    "given": "Warren"
+                },
+                {
+                    "family": "Abbasi",
+                    "given": "Hameer"
+                },
+                {
+                    "family": "Gohlke",
+                    "given": "Christoph"
+                },
+                {
+                    "family": "Oliphant",
+                    "given": "Travis E."
+                }
+            ],
+            "container-title": "Nature",
+            "id": "Harris2020",
+            "issue": "7825",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        9
+                    ]
+                ]
+            },
+            "page": "357-362",
+            "publisher": "Springer Science; Business Media LLC",
+            "title": "Array programming with NumPy",
+            "type": "article-journal",
+            "volume": "585"
+        },
+        {
+            "DOI": "10.1109/mcse.2011.37",
+            "URL": "https://doi.org/10.1109/mcse.2011.37",
+            "author": [
+                {
+                    "dropping-particle": "van der",
+                    "family": "Walt",
+                    "given": "Stéfan"
+                },
+                {
+                    "family": "Colbert",
+                    "given": "S Chris"
+                },
+                {
+                    "family": "Varoquaux",
+                    "given": "Gaël"
+                }
+            ],
+            "container-title": "Computing in Science Engineering",
+            "id": "vanderWalt2011",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011,
+                        3
+                    ]
+                ]
+            },
+            "page": "22-30",
+            "publisher": "Institute of Electrical; Electronics Engineers (IEEE)",
+            "title": "The NumPy array: A structure for efficient numerical computation",
+            "title-short": "The NumPy array",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {
@@ -269,7 +1185,7 @@
         }
     ],
     "project_biblios": [
-        "references.bib",
+        "book.bib",
         "packages.bib"
     ]
 }
